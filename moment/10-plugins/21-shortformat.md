@@ -1,5 +1,5 @@
 ---
-title: Short Date Formatter
+title: shortformat
 ---
 
 If you want to format times in a short way, you can use the [moment-shortformat](https://github.com/researchgate/moment-shortformat) plugin by [@researchgate](https://github.com/researchgate).

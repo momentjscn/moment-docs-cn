@@ -1,5 +1,5 @@
 ---
-title: Is After
+title: isAfter()
 version: 2.0.0
 signature: |
   moment().isAfter(Moment|String|Number|Date|Array);

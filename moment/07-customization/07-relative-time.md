@@ -1,5 +1,5 @@
 ---
-title: Relative Time
+title: relativeTime
 version: 1.0.0
 signature: |
   // From 2.12.0 onward

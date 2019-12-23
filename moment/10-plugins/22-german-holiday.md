@@ -1,5 +1,5 @@
 ---
-title: German Holiday (Feiertag)
+title: feiertage
 signature: |
   npm install moment-feiertage --save
 ---

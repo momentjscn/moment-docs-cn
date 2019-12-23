@@ -1,5 +1,5 @@
 ---
-title: Duration Format
+title: duration-format
 signature: |
   npm install moment-duration-format
 ---

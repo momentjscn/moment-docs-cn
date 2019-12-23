@@ -1,5 +1,5 @@
 ---
-title: Week of Year (ISO)
+title: isoWeek()
 version: 2.0.0
 signature: |
   moment().isoWeek(Number);

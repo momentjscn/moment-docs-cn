@@ -1,5 +1,5 @@
 ---
-title: Hijri Calendar
+title: hijri
 signature: |
   npm install moment-hijri
 ---

@@ -1,5 +1,5 @@
 ---
-title: Long Date Formats
+title: weekdaysMin
 version: 1.1.0
 signature: |
   // From 2.12.0 onward

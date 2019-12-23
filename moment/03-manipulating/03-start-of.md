@@ -1,5 +1,5 @@
 ---
-title: Start of Time
+title: startOf()
 version: 1.7.0
 signature: |
   moment().startOf(String);

@@ -1,5 +1,5 @@
 ---
-title: Years
+title: years()
 version: 1.6.0
 signature: |
   moment.duration().years();

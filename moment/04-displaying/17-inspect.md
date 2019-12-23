@@ -1,5 +1,5 @@
 ---
-title: Inspect
+title: inspect()
 version: 2.16.0
 signature: |
   moment().inspect();

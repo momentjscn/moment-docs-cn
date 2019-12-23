@@ -1,5 +1,5 @@
 ---
-title: ISO Day of Week
+title: isoWeekday()
 version: 2.1.0
 signature: |
   moment().isoWeekday(Number);

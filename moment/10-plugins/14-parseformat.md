@@ -1,5 +1,5 @@
 ---
-title: Parse Date Format
+title: parseformat
 signature: |
   npm install moment-parseformat
 ---

@@ -1,5 +1,5 @@
 ---
-title: Calendar Time
+title: calendar()
 version: 1.3.0
 signature: |
   moment().calendar();

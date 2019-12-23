@@ -1,5 +1,5 @@
 ---
-title: Date
+title: moment(Date)
 version: 1.0.0
 signature: |
   moment(Date);

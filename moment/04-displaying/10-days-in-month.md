@@ -1,5 +1,5 @@
 ---
-title: Days in Month
+title: daysInMonth()
 version: 1.5.0
 signature: |
   moment().daysInMonth();

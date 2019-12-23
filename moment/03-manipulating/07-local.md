@@ -1,5 +1,5 @@
 ---
-title: Local
+title: local()
 version: 1.5.0
 signature: |
   moment().local();

@@ -1,5 +1,5 @@
 ---
-title: Relative Time Rounding
+title: relativeTimeRounding()
 version: 2.14.0
 signature: |
   moment.relativeTimeRounding();  // getter

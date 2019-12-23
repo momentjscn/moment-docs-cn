@@ -1,5 +1,5 @@
 ---
-title: Is DST Shifted
+title: isDSTShifted()
 version: 2.3.0-2.14.0
 signature: |
   moment('2013-03-10 2:30', 'YYYY-MM-DD HH:mm').isDSTShifted()

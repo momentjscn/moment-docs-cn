@@ -1,5 +1,5 @@
 ---
-title: parseZone
+title: parseZone()
 version: 2.3.0
 signature: |
   moment.parseZone()

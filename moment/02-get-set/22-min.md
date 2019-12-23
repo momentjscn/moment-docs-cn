@@ -1,5 +1,5 @@
 ---
-title: Minimum
+title: min()
 version: 2.7.0
 signature: |
   moment.min(Moment[,Moment...]);

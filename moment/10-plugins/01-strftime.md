@@ -1,5 +1,5 @@
 ---
-title: Strftime
+title: strftime
 signature: |
   npm install moment-strftime
 ---

@@ -1,5 +1,5 @@
 ---
-title: Business
+title: business
 signature: |
   npm install moment-business
 ---

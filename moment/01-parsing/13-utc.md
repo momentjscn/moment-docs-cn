@@ -1,5 +1,5 @@
 ---
-title: UTC
+title: utc()
 version: 1.5.0
 signature: |
   moment.utc();

@@ -1,5 +1,5 @@
 ---
-title: Calendar Format
+title: calendarFormat
 version: 2.14.0
 signature: |
   moment.calendarFormat = Function

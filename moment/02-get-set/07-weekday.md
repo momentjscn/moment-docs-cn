@@ -1,5 +1,5 @@
 ---
-title: Day of Week (Locale Aware)
+title: weekday()
 version: 2.1.0
 signature: |
   moment().weekday(Number);

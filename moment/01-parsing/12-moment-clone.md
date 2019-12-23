@@ -1,5 +1,5 @@
 ---
-title: Moment Clone
+title: moment(Moment)
 version: 1.2.0
 signature: |
   moment(Moment);

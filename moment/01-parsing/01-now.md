@@ -1,5 +1,5 @@
 ---
-title: Now
+title: moment()
 version: 1.0.0
 signature: |
   moment();

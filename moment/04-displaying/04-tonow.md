@@ -1,5 +1,5 @@
 ---
-title: Time to now
+title: toNow()
 version: 2.10.3
 signature: |
   moment().toNow();

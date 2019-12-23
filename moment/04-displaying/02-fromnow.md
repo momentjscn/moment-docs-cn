@@ -1,5 +1,5 @@
 ---
-title: Time from now
+title: fromNow()
 version: 1.0.0
 signature: |
   moment().fromNow();

@@ -1,5 +1,5 @@
 ---
-title: String + Format
+title: moment(String) 带格式
 version: 1.0.0
 signature: |
   moment(String, String);

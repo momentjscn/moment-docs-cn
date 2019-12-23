@@ -1,5 +1,5 @@
 ---
-title: Is Before
+title: isBefore()
 version: 2.0.0
 signature: |
   moment().isBefore(Moment|String|Number|Date|Array);

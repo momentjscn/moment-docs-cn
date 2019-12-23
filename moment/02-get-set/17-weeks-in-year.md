@@ -1,5 +1,5 @@
 ---
-title: Weeks In Year
+title: weeksInYear()
 version: 2.6.0
 signature: |
   moment().weeksInYear();

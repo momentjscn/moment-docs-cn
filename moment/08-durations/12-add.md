@@ -1,5 +1,5 @@
 ---
-title: Add Time
+title: add()
 version: 2.1.0
 signature: |
   moment.duration().add(Number, String);

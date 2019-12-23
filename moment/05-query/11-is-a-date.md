@@ -1,5 +1,5 @@
 ---
-title: Is a Date
+title: isDate()
 version: 2.9.0
 signature: |
   moment.isDate(obj);

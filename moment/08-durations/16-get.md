@@ -1,5 +1,5 @@
 ---
-title: Get Unit of Time
+title: get()
 version: 2.1.0
 signature: |
   moment.duration().get(String);

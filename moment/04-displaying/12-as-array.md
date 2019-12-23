@@ -1,5 +1,5 @@
 ---
-title: As Array
+title: toArray()
 version: 1.7.0
 signature: |
   moment().toArray();

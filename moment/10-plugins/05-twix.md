@@ -1,5 +1,5 @@
 ---
-title: Twix
+title: twix
 signature: |
   npm install twix
 ---

@@ -1,5 +1,5 @@
 ---
-title: Loading locales in NodeJS
+title: 加载语言 (NodeJS)
 version: 1.0.0
 signature: |
   moment.locale(String);

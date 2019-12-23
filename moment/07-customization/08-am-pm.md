@@ -1,5 +1,5 @@
 ---
-title: AM/PM
+title: meridiem
 version: 1.6.0
 signature: |
   // From 2.12.0 onward

@@ -1,5 +1,5 @@
 ---
-title: Date of Month
+title: date()
 version: 1.0.0
 signature: |
   moment().date(Number);

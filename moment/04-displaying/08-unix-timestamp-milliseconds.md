@@ -1,5 +1,5 @@
 ---
-title: Unix Timestamp (milliseconds)
+title: valueOf()
 version: 1.0.0
 signature: |
   moment().valueOf();

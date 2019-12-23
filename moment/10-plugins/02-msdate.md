@@ -1,5 +1,5 @@
 ---
-title: MSDate
+title: msdate
 ---
 
 

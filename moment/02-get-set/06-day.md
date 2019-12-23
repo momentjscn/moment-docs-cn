@@ -1,5 +1,5 @@
 ---
-title: Day of Week
+title: day()
 version: 1.3.0
 signature: |
   moment().day(Number|String);

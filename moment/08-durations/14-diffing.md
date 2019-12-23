@@ -1,5 +1,5 @@
 ---
-title: Using Duration with Diff
+title: duration(x.diff(y))
 version: 2.1.0
 signature: |
   var duration = moment.duration(x.diff(y))

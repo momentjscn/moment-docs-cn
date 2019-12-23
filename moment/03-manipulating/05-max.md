@@ -1,5 +1,5 @@
 ---
-title: Maximum
+title: max()
 version: 2.1.0-2.7.0
 signature: |
   moment().max(Moment|String|Number|Date|Array);

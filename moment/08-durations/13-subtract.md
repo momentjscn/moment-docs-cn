@@ -1,5 +1,5 @@
 ---
-title: Subtract Time
+title: subtract()
 version: 2.1.0
 signature: |
   moment.duration().subtract(Number, String);

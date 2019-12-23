@@ -1,5 +1,5 @@
 ---
-title: Changing locales locally
+title: 设置语言 (局部)
 version: 1.7.0
 signature: |
   // From version 2.8.1 onward

@@ -1,5 +1,5 @@
 ---
-title: Quarter
+title: quarter()
 version: 2.6.0
 signature: |
   moment().quarter(); // Number

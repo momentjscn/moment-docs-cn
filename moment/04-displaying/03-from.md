@@ -1,5 +1,5 @@
 ---
-title: Time from X
+title: from()
 version: 1.0.0
 signature: |
   moment().from(Moment|String|Number|Date|Array);

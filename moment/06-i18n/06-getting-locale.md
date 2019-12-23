@@ -1,5 +1,5 @@
 ---
-title: Checking the current Moment.js locale
+title: 获取当前语言
 version: 1.6.0
 signature: |
   // From version 2.8.1 onward

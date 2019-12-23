@@ -1,5 +1,5 @@
 ---
-title: Weekday Abbreviations
+title: weekdaysShort
 version: 1.0.0
 signature: |
   // From 2.12.0 onward

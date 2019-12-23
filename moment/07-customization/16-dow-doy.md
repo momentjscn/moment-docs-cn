@@ -1,5 +1,5 @@
 ---
-title: First Day of Week and First Week of Year
+title: week
 version: 1.0.0
 signature: |
   // From 2.12.0 onward

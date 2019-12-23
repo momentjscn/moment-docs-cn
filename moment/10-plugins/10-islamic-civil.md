@@ -1,5 +1,5 @@
 ---
-title: Islamic Civil Calendar
+title: islamic-civil
 signature: |
   npm install moment-islamic-civil
 ---

@@ -1,5 +1,5 @@
 ---
-title: Changing locale globally
+title: 设置语言 (全局)
 version: 1.0.0
 signature: |
   // From 2.8.1 onward

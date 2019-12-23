@@ -1,5 +1,5 @@
 ---
-title: Round
+title: round
 signature: |
   npm install moment-round
 ---

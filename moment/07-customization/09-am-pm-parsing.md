@@ -1,5 +1,5 @@
 ---
-title: AM/PM Parsing
+title: meridiemParse
 version: 2.1.0
 signature: |
   // From 2.12.0 onward

@@ -1,5 +1,5 @@
 ---
-title: Object
+title: moment(Object)
 version: 2.2.1
 signature: |
   moment({unit: value, ...});

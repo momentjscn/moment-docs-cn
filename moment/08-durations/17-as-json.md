@@ -1,5 +1,5 @@
 ---
-title: As JSON
+title: toJSON()
 version: 2.9.0
 signature: |
   moment.duration().toJSON();

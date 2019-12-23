@@ -1,5 +1,5 @@
 ---
-title: Taiwan Calendar
+title: taiwan
 signature: |
   npm install moment-taiwan
 ---

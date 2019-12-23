@@ -1,5 +1,5 @@
 ---
-title: Transform
+title: transform
 signature: |
   bower install moment-transform
 ---

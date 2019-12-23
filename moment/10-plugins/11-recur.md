@@ -1,5 +1,5 @@
 ---
-title: Recur
+title: recur
 signature: |
   npm install moment-recur
 ---

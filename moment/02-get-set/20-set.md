@@ -1,5 +1,5 @@
 ---
-title: Set
+title: set()
 version: 2.2.1
 signature: |
   moment().set(String, Int);

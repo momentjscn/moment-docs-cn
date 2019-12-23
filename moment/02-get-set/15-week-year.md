@@ -1,5 +1,5 @@
 ---
-title: Week Year
+title: weekYear()
 version: 2.1.0
 signature: |
   moment().weekYear(Number);

@@ -1,5 +1,5 @@
 ---
-title: Array
+title: moment(Number[])
 version: 1.0.0
 signature: |
   moment(Number[]);

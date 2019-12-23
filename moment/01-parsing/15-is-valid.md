@@ -1,5 +1,5 @@
 ---
-title: Validation
+title: isValid()
 version: 1.7.0
 signature: |
   moment().isValid();

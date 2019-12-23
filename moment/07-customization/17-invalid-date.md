@@ -1,5 +1,5 @@
 ---
-title: Invalid Date
+title: invalidDate
 version: 2.3.0
 signature: |
   // From 2.12.0 onward

@@ -1,5 +1,5 @@
 ---
-title: Java DateFormat Parser
+title: jdateformatparser
 signature: |
   npm install moment-jdateformatparser
 ---

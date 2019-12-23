@@ -1,5 +1,5 @@
 ---
-title: ASP.NET JSON Date
+title: moment(JSONDate)
 version: 1.3.0
 signature: |
   moment(String);

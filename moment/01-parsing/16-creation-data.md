@@ -1,5 +1,5 @@
 ---
-title: Creation Data
+title: creationData()
 version: 2.11.0
 signature: |
   moment().creationData();

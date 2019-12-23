@@ -1,5 +1,5 @@
 ---
-title: Is a Moment
+title: isMoment()
 version: 1.5.0
 signature: |
   moment.isMoment(obj);

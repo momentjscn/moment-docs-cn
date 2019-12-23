@@ -1,5 +1,5 @@
 ---
-title: Jalaali Calendar
+title: jalaali
 signature: |
   npm install moment-jalaali
 ---

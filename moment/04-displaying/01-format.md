@@ -1,5 +1,5 @@
 ---
-title: Format
+title: format()
 version: 1.0.0
 signature: |
   moment().format();

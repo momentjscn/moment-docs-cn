@@ -1,5 +1,5 @@
 ---
-title: Months
+title: months()
 version: 1.6.0
 signature: |
   moment.duration().months();

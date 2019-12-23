@@ -1,5 +1,5 @@
 ---
-title: UTC offset
+title: utcOffset()
 version: 2.9.0+
 signature: |
   moment().utcOffset();

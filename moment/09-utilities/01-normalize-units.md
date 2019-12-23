@@ -1,5 +1,5 @@
 ---
-title: Normalize Units
+title: normalizeUnits()
 version: 2.3.0
 signature: |
   moment.normalizeUnits(String);

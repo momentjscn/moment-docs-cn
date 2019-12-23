@@ -1,5 +1,5 @@
 ---
-title: Other
+title: 其他
 ---
 
 

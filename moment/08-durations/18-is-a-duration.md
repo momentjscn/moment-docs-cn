@@ -1,5 +1,5 @@
 ---
-title: Is a Duration
+title: isDuration()
 version: 1.6.0
 signature: |
   moment.isDuration(obj);

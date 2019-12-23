@@ -1,5 +1,5 @@
 ---
-title: Loading locales in the browser
+title: 加载语言 (浏览器)
 version: 1.0.0
 signature: |
   // From 2.8.1 onward

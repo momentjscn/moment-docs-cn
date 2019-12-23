@@ -1,5 +1,5 @@
 ---
-title: As ISO 8601 String
+title: toISOString()
 version: 2.8.0
 signature: |
   moment.duration().toISOString();

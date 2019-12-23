@@ -1,5 +1,5 @@
 ---
-title: Unix Timestamp (seconds)
+title: unix()
 version: 1.6.0
 signature: |
   moment().unix();

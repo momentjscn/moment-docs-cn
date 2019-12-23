@@ -1,5 +1,5 @@
 ---
-title: Difference
+title: diff()
 version: 1.0.0
 signature: |
   moment().diff(Moment|String|Number|Date|Array);

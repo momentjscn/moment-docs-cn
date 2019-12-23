@@ -1,5 +1,5 @@
 ---
-title: Weeks
+title: weeks()
 version: 1.6.0
 signature: |
   moment.duration().weeks();

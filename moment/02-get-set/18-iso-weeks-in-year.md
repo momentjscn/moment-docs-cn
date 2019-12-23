@@ -1,5 +1,5 @@
 ---
-title: Weeks In Year (ISO)
+title: isoWeeksInYear()
 version: 2.6.0
 signature: |
   moment().isoWeeksInYear();

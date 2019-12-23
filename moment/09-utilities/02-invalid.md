@@ -1,5 +1,5 @@
 ---
-title: Invalid
+title: invalid()
 version: 2.3.0
 signature: |
   moment.invalid(Object);

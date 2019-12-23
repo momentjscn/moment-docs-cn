@@ -1,5 +1,5 @@
 ---
-title: Year
+title: year()
 version: 1.0.0
 signature: |
   moment().year(Number);

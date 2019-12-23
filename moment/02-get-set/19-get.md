@@ -1,5 +1,5 @@
 ---
-title: Get
+title: get()
 version: 2.2.1
 signature: |
   moment().get('year');

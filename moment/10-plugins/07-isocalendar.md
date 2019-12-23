@@ -1,5 +1,5 @@
 ---
-title: ISO Calendar
+title: isocalendar
 signature: |
   npm install moment-isocalendar
 ---

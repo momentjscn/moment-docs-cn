@@ -1,5 +1,5 @@
 ---
-title: Relative Time Thresholds
+title: relativeTimeThreshold()
 version: 2.7.0
 signature: |
   moment.relativeTimeThreshold(unit);  // getter

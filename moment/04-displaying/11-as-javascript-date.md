@@ -1,5 +1,5 @@
 ---
-title: As Javascript Date
+title: toDate()
 version: 1.0.0
 signature: |
   moment().toDate();

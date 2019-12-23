@@ -1,5 +1,5 @@
 ---
-title: Changing Time Source
+title: now
 version: 2.11.0
 signature: |
   moment.now = function () { return +new Date(); }

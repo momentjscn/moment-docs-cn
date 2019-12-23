@@ -1,5 +1,5 @@
 ---
-title: Is Daylight Saving Time
+title: isDST()
 version: 1.2.0
 signature: |
   moment().isDST();

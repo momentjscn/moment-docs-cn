@@ -1,5 +1,5 @@
 ---
-title: Date Ranges
+title: range
 signature: |
   npm install moment-range
 ---

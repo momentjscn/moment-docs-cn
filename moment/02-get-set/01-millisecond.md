@@ -1,5 +1,5 @@
 ---
-title: Millisecond
+title: millisecond()
 version: 1.3.0
 signature: |
   moment().millisecond(Number);

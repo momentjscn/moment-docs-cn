@@ -1,5 +1,5 @@
 ---
-title: Second
+title: second()
 version: 1.0.0
 signature: |
   moment().second(Number);

@@ -1,5 +1,5 @@
 ---
-title: Query
+title: 查询
 ---
 
 

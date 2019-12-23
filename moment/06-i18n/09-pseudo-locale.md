@@ -1,5 +1,5 @@
 ---
-title: Pseudo Locale
+title: locale('x-pseudo')
 version: 2.13.0
 signature: | 
     moment.locale('x-pseudo')

@@ -1,5 +1,5 @@
 ---
-title: String + Formats
+title: moment(String) 多个格式
 version: 1.0.0
 signature: |
   moment(String, String[], String, Boolean);

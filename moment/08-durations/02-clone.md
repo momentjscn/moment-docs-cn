@@ -1,5 +1,5 @@
 ---
-title: Clone
+title: clone()
 version: 2.19.0
 signature: |
   moment.duration().clone();

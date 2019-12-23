@@ -1,5 +1,5 @@
 ---
-title: As Object
+title: toObject()
 version: 2.10.5
 signature: |
   moment().toObject();

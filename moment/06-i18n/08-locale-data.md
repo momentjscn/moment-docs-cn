@@ -1,5 +1,5 @@
 ---
-title: Accessing locale specific functionality
+title: localeData()
 version: 2.8.0
 signature: |
   localeData = moment.localeData()

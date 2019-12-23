@@ -1,5 +1,5 @@
 ---
-title: Weekday Names
+title: weekdays
 version: 1.0.0
 signature: |
   // From version 2.12.0 onward

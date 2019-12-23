@@ -1,5 +1,5 @@
 ---
-title: Time zone Offset
+title: zone()
 version: From 1.2.0, deprecated 2.9.0
 signature: |
   moment().zone();

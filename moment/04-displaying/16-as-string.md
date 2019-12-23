@@ -1,5 +1,5 @@
 ---
-title: As String
+title: toString()
 version: 2.1.0
 signature: |
   moment().toString();

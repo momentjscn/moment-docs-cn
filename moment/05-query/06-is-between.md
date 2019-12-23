@@ -1,5 +1,5 @@
 ---
-title: Is Between
+title: isBetween()
 version: 2.9.0
 signature: |
   //From 2.13.0 onward

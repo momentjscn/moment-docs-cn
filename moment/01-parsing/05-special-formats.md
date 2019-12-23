@@ -1,5 +1,5 @@
 ---
-title: Special Formats
+title: moment(String) 特殊格式
 version: 2.7.0
 signature: |
   moment(String, moment.CUSTOM_FORMAT, [String], [Boolean]);

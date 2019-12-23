@@ -1,5 +1,5 @@
 ---
-title: Calendar
+title: calendar
 version: 1.3.0
 signature: |
   // From 2.12.0 onward

@@ -1,5 +1,5 @@
 ---
-title: String
+title: moment(String)
 version: 1.0.0
 signature: |
   moment(String);

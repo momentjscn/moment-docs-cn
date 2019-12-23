@@ -1,5 +1,5 @@
 ---
-title: Days
+title: days()
 version: 1.6.0
 signature: |
   moment.duration().days();

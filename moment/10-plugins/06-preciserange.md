@@ -1,5 +1,5 @@
 ---
-title: Precise Range
+title: precise-range
 signature: |
   npm install moment-precise-range-plugin
 ---

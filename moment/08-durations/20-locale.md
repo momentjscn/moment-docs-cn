@@ -1,5 +1,5 @@
 ---
-title: Locale
+title: locale()
 version: 2.17.1
 signature: |
   moment.duration().locale();

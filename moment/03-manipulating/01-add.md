@@ -1,5 +1,5 @@
 ---
-title: Add
+title: add()
 version: 1.0.0
 signature: |
   moment().add(Number, String);

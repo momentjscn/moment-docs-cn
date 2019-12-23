@@ -1,5 +1,5 @@
 ---
-title: Timer
+title: timer
 signature: |
   npm install moment-timer
 ---

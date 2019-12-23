@@ -1,5 +1,5 @@
 ---
-title: Day of Year
+title: dayOfYear()
 version: 2.0.0
 signature: |
   moment().dayOfYear(Number);

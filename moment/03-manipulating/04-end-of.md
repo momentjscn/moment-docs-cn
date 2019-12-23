@@ -1,5 +1,5 @@
 ---
-title: End of Time
+title: endOf()
 version: 1.7.0
 signature: |
   moment().endOf(String);

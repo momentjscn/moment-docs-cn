@@ -1,5 +1,5 @@
 ---
-title: Is Same
+title: isSame()
 version: 2.0.0
 signature: |
   moment().isSame(Moment|String|Number|Date|Array);

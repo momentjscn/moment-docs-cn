@@ -1,5 +1,5 @@
 ---
-title: Minute
+title: minute()
 version: 1.0.0
 signature: |
   moment().minute(Number);

@@ -1,5 +1,5 @@
 ---
-title: Subtract
+title: subtract()
 version: 1.0.0
 signature: |
   moment().subtract(Number, String);

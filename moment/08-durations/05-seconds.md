@@ -1,5 +1,5 @@
 ---
-title: Seconds
+title: seconds()
 version: 1.6.0
 signature: |
   moment.duration().seconds();
