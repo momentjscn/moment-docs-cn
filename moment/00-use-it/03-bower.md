@@ -2,10 +2,11 @@
 title: Bower
 ---
 
-[bower](https://bower.io/)
+[bower]
 
 ```
 bower install --save moment
 ```
 
-Notable files are `moment.js`, `locale/*.js` and `min/moment-with-locales.js`.
+值得注意的文件是 `moment.js`、`locale/*.js` 和 `min/moment-with-locales.js`。
+

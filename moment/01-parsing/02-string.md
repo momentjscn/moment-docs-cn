@@ -5,61 +5,58 @@ signature: |
   moment(String);
 ---
 
-When creating a moment from a string, we first check if the string matches known [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formats, we then check if the string matches the [RFC 2822 Date time](https://tools.ietf.org/html/rfc2822#section-3.3) format before dropping to the fall back of `new Date(string)` if a known format is not found.
+当从字符串创建 moment 时，需要首先检查字符串是否与已知的 [ISO 8601][ISO_8601] 格式匹配，如果未找到已知的格式，则在降维到 `new Date(string)` 之前检查字符串是否与 [RFC 2822 日期时间][rfc2822_3]格式匹配。
 
 ```javascript
 var day = moment("1995-12-25");
 ```
 
-**Warning:** Browser support for parsing strings [is inconsistent](http://dygraphs.com/date-formats.html). Because there is no specification on which formats should be supported, what works in some browsers will not work in other browsers.
+注意，浏览器对于解析字符串的支持是[不一致][dygraphs_date_formats]的。 
+因为没有关于应该支持哪种格式的规范，所以在某些浏览器中有效的格式在其他浏览器中可能无效。
 
-<!--
-**Note:** This has been the source of a lot of confusion, because moments created via `Date` constructor don't support `isValid` and also work unreliably. So it would be soon deprecated. From version 2.6.0 there is a way to prevent Date constructor usage - just set `moment.createFromInputFallback` to an empty function.
--->
+为了在解析 ISO 8601 以外的字符串时获得一致的结果，应使用[字符串 + 格式][parsing_string-format]。
 
-For consistent results parsing anything other than ISO 8601 strings, you should use [String + Format](#/parsing/string-format/).
+#### 支持的 ISO 8601 字符串
 
-#### Supported ISO 8601 strings
-
-An ISO 8601 string requires a date part.
+ISO 8601 字符串需要日期片段。
 
 ```
-2013-02-08  # A calendar date part
-2013-W06-5  # A week date part
-2013-039    # An ordinal date part
+2013-02-08  # 日历日期片段。
+2013-W06-5  # 星期日期片段。
+2013-039    # 序数日期片段。
 
-20130208    # Basic (short) full date
-2013W065    # Basic (short) week, weekday
-2013W06     # Basic (short) week only
-2013050     # Basic (short) ordinal date
+20130208    # 基本的完整日期（短）。
+2013W065    # 基本的星期、工作日（短）。
+2013W06     # 仅基本的星期（短）。
+2013050     # 基本的序数日期（短）。
 ```
 
-A time part can also be included, separated from the date part by a space or an uppercase T.
+还可以包括时间片段，与日期片段之间使用空格或大写字母 T 分隔。
 
 ```
-2013-02-08T09            # An hour time part separated by a T
-2013-02-08 09            # An hour time part separated by a space
-2013-02-08 09:30         # An hour and minute time part
-2013-02-08 09:30:26      # An hour, minute, and second time part
-2013-02-08 09:30:26.123  # An hour, minute, second, and millisecond time part
-2013-02-08 24:00:00.000  # hour 24, minute, second, millisecond equal 0 means next day at midnight
+2013-02-08T09            # 使用 T 分隔的小时时间片段。
+2013-02-08 09            # 使用空格分隔的小时时间片段。
+2013-02-08 09:30         # 小时、分钟的时间片段。
+2013-02-08 09:30:26      # 小时、分钟、秒钟的时间片段。
+2013-02-08 09:30:26.123  # 小时、分钟、秒钟和毫秒的时间片段。
+2013-02-08 24:00:00.000  # 小时 24、分钟、秒钟、毫秒等于 0 表示第二天午夜。
 
-20130208T080910,123      # Short date and time up to ms, separated by comma
-20130208T080910.123      # Short date and time up to ms
-20130208T080910          # Short date and time up to seconds
-20130208T0809            # Short date and time up to minutes
-20130208T08              # Short date and time, hours only
+20130208T080910,123      # 短的日期和时间，精确到毫秒，以逗号分隔。
+20130208T080910.123      # 短的日期和时间，精确到毫秒。
+20130208T080910          # 短的日期和时间，精确到秒钟。
+20130208T0809            # 短的日期和时间，精确到分钟。
+20130208T08              # 短的日期和时间，仅有小时。
 ```
 
-Any of the date parts can have a time part.
+任何的日期片段都可以有时间片段。
 
 ```
-2013-02-08 09  # A calendar date part and hour time part
-2013-W06-5 09  # A week date part and hour time part
-2013-039 09    # An ordinal date part and hour time part
+2013-02-08 09  # 日历日期片段和小时时间片段。
+2013-W06-5 09  # 星期日期片段和小时时间片段。
+2013-039 09    # 序数日期片段和小时时间片段。
 ```
 
-If a time part is included, an offset from UTC can also be included as `+-HH:mm`, `+-HHmm`, `+-HH` or `Z`.
+如果包含时间片段，则还可以将 UTC 的偏移量包含为 `+-HH:mm`、`+-HHmm`、`+-HH` 或 `Z`。
 
 ```
 2013-02-08 09+07:00            # +-HH:mm
@@ -69,19 +66,20 @@ If a time part is included, an offset from UTC can also be included as `+-HH:mm`
 2013-02-08 09:30:26.123+07     # +-HH
 ```
 
-**Note:** Support for the week and ordinal formats was added in version **2.3.0**.
+注意：在版本 2.3.0 中添加了对星期和序数格式的支持。
 
-If a string does not match any of the above formats and is not able to be parsed with `Date.parse`, `moment#isValid` will return false.
+如果字符串与以上任何格式都不匹配，并且无法使用 `Date.parse` 进行解析，则 `moment＃isValid` 将会返回 false。
 
 ```javascript
 moment("not a real date").isValid(); // false
 ```
 
-#### The RFC 2822 date time format
+#### RFC 2822 日期时间格式
 
-Before parsing a RFC 2822 date time the string is cleansed to remove any comments and/or newline characters. The additional characters are legal in the format but add nothing to creating a valid moment instance.
+在解析 RFC 2822 日期时间之前，将会清理字符串以删除所有的注释和换行符。 
+其他的字符虽然在格式上合法，但对创建有效的 moment 实例没有任何作用。
 
-After cleansing, the string is validated in the following space-separated sections, all using the English language:
+清理之后，该字符串会在以下使用空格分隔的部分中进行验证，全部使用英语：
 
 ```
 6 Mar 17 21:22 UT
@@ -92,16 +90,17 @@ Mon 06 Mar 2017 21:22:23 z
 Mon, 06 Mar 2017 21:22:23 +0000
 ```
 
-1. Day of Week in three letters, followed by an optional comma. (optional)
-2. Day of Month (1 or 2 digit), followed by a three-letter month and 2 or 4 digit year
-3. Two-digit hours and minutes separated by a colon (:), followed optionally by another colon and seconds in 2-digits
-4. Timezone or offset in one of the following formats:
+1. 星期几（三个字母），后面跟随一个可选的逗号。（可选的）
+2. 月份中的某天（1 或 2 位数字），后面跟随三个字母的月份和 2 或 4 位数字的年份。
+3. 两位数字的小时和分钟，以冒号（:）分隔，后面可选地跟随另一个冒号和 2 位数字的秒钟。
+4. 时区或偏移量采用以下格式之一：
   1. UT : +0000
   2. GMT : +0000
-  3. EST | CST | MST | PST | EDT | CDT | MDT | PDT : US time zones*
-  4. A - I | K - Z : Military time zones*
-  5. Time offset +/-9999
+  3. EST | CST | MST | PST | EDT | CDT | MDT | PDT : 美国时区*
+  4. A - I | K - Z : 军事时区*
+  5. 时间偏移 +/-9999
 
- [*] See [section 4.3](https://tools.ietf.org/html/rfc2822#section-4.3) of the specification for details.
+ [*] 有关详细信息，参阅规范的 [4.3 章节][rfc2822_section_4_3]。
 
-The parser also confirms that the day-of-week (when included) is consistent with the date.
+解析器还会确认星期（当包含时）与日期一致。
+

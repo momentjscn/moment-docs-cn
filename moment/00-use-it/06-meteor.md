@@ -2,8 +2,8 @@
 title: meteor
 ---
 
-[meteor](https://www.meteor.com/) / [atmosphere](https://atmospherejs.com/)
-/ [momentjs:moment](https://atmospherejs.com/momentjs/moment)
+[meteor] / [atmosphere]
+/ [momentjs:moment][atmosphere_momentjs]
 
 ```
 meteor add momentjs:moment

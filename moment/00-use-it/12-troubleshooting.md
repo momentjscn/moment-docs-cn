@@ -3,16 +3,17 @@ title: 疑难杂症
 ---
 
 
-If you are having any troubles, the first place to check is the [guides](/guides).
+如果你有任何麻烦，则首先查看[指南][guides]。
 
-If you don't find what you are looking for there, try asking a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/momentjs) with the `momentjs` tag.
+如果找不到你要找的东西，则尝试使用 `momentjs` 标签在 [Stack Overflow][stackoverflow_momentjs] 上提问。
 
-Note: More than half of the issues seen on Stack Overflow can be answered by [this blog post](https://maggiepint.com/2016/05/14/moment-js-shows-the-wrong-date/).
+注意：[这篇博客文章][moment-js-shows-the-wrong-date]可以解答 Stack Overflow 上超过一半的问题。
 
-You can also use the [GitHub issue tracker](https://github.com/moment/moment/issues) to find related issues or open a new issue.
+你还可以使用 [GitHub 问题跟踪器][moment_issues]查找相关问题或发起新的问题。
 
-In addition, Moment has a [Gitter](https://gitter.im/moment/moment) where the internal team is frequently available.
+此外，Moment 有一个 [Gitter][gitter_moment]，内部团队经常使用。
 
-For general troubleshooting help, [Stack Overflow](https://stackoverflow.com/questions/tagged/momentjs) is the preferred forum.
-Moment's maintainers are very active on Stack Overflow, as are several other knowledgeable users. The fastest response will be there.
+对于一般的故障排除帮助，首选 [Stack Overflow][stackoverflow_momentjs]。 
+Moment 的维护者与其他一些博学的用户一样，在 Stack Overflow 上非常活跃。 
+最快的响应将会在那里。
 

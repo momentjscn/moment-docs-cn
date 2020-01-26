@@ -12,18 +12,18 @@ moment({ y    :2010, M     :3, d   :5, h    :15, m      :10, s      :3, ms      
 moment({ year :2010, month :3, day :5, hour :15, minute :10, second :3, millisecond :123});
 moment({ years:2010, months:3, days:5, hours:15, minutes:10, seconds:3, milliseconds:123});
 moment({ years:2010, months:3, date:5, hours:15, minutes:10, seconds:3, milliseconds:123});
-moment({ years:'2010', months:'3', date:'5', hours:'15', minutes:'10', seconds:'3', milliseconds:'123'});  // from 2.11.0
+moment({ years:'2010', months:'3', date:'5', hours:'15', minutes:'10', seconds:'3', milliseconds:'123'});  // 从 2.11.0 开始。
 ```
 
-You can create a moment by specifying some of the units in an object.
+可以通过指定对象中的某些单位来创建 moment。
 
-Omitted units default to 0 or the current date, month, and year.
+省略的单位默认为 0 或当前的日期、月份和年份。
 
-`day` and `date` key both mean day-of-the-month.
+`day` 和 `date` 键均表示月份的某天。
 
-`date` was added in **2.8.4**.
+`date` 新增于 2.8.4。
 
-String values (as shown on the last line) are supported from version
-**2.11.0**.
+从 2.11.0 版本开始，支持字符串值（如最后一行示例所示）。
 
-Note that like `moment(Array)` and `new Date(year, month, date)`, months are 0 indexed.
+注意，像 `moment(Array)` 和 `new Date(year, month, date)` 一样，月份从 0 开始索引。
+

@@ -12,21 +12,24 @@ var moment = require('moment');
 moment().format();
 ```
 
-**Note:** There is a bug that prevents `moment.locale` from being loaded. 
+注意，有一个 bug 会导致无法加载 `moment.locale`。
+
 ```javascript
 var moment = require('moment');
 moment.locale('cs');
 console.log(moment.locale()); // en
 ```
 
-Use the workaround below
+使用下面的解决方法。
 
 ```javascript
 var moment = require('moment');
 require('moment/locale/cs');
 console.log(moment.locale()); // cs
 ```
-In order to include all the locales
+
+为了包含所有的区域设置。
+
 ```javascript
 var moment = require('moment');
 require("moment/min/locales.min");

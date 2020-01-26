@@ -11,7 +11,8 @@ var moment = require('moment');
 moment().format();
 ```
 
-**Note:** By default, webpack bundles _all_ Moment.js locales (in Moment.js 2.18.1, that’s 160 minified KBs). To strip unnecessary locales and bundle only the used ones, add [`moment-locales-webpack-plugin`](https://www.npmjs.com/package/moment-locales-webpack-plugin):
+默认情况下，webpack 会打包所有的 Moment.js 区域设置（在 Moment.js 2.18.1 中，最小为 160 KB）。 
+若要剥离不必要的区域设置且仅打包使用的区域设置，则添加 [`moment-locales-webpack-plugin`][moment-locales-webpack-plugin]：
 
 <!-- skip-example -->
 
@@ -21,11 +22,11 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
     plugins: [
-        // To strip all locales except “en”
+        // 剥离除 “en” 以外的所有区域设置。
         new MomentLocalesPlugin(),
 
-        // Or: To strip all locales except “en”, “es-us” and “ru”
-        // (“en” is built into Moment and can’t be removed)
+        // 或者：剥离除 “en”、“es-us” 和 “ru” 以外的所有区域设置。
+        //（“en” 内置于 Moment 中，无法移除）
         new MomentLocalesPlugin({
             localesToKeep: ['es-us', 'ru'],
         }),
@@ -33,4 +34,5 @@ module.exports = {
 };
 ```
 
-There are other resources to optimize Moment.js with webpack, [for example this one](https://github.com/jmblog/how-to-optimize-momentjs-with-webpack).
+还有其他资源可以使用 webpack 优化 Moment.js，[例如该资源][how-to-optimize-momentjs-with-webpack]。
+

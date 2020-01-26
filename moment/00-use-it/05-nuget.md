@@ -2,7 +2,7 @@
 title: NuGet
 ---
 
-[NuGet](https://www.nuget.org/) / [Moment.js](https://www.nuget.org/packages/Moment.js/)
+[NuGet][nuget] / [Moment.js][nuget_moment]
 ```
 Install-Package Moment.js
 ```

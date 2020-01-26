@@ -6,31 +6,35 @@ signature: |
 ---
 
 
-If you don't know the exact format of an input string, but know it could be one of many, you can use an array of formats.
+如果不知道输入字符串的确切格式，但是知道它可能是多种格式之一，则可以使用格式数组。
 
-This is the same as [String + Format](#/parsing/string-format/), only it will try to match the input to multiple formats.
+这与[字符串 + 格式][parsing_string-format]相同，只是它将会尝试将输入匹配为多种格式。
 
 ```js
 moment("12-25-1995", ["MM-DD-YYYY", "YYYY-MM-DD"]);
 ```
 
-Starting in version **2.3.0**, Moment uses some simple heuristics to determine which format to use. In order:
+从 2.3.0 版本开始，Moment 使用一些简单的试探法来确定要使用的格式。
+这是为了：
 
- * Prefer formats resulting in [valid](#/parsing/is-valid/) dates over invalid ones.
- * Prefer formats that parse more of the string than less and use more of the format than less, i.e. prefer stricter parsing.
- * Prefer formats earlier in the array than later.
-
-```js
-moment("29-06-1995", ["MM-DD-YYYY", "DD-MM", "DD-MM-YYYY"]); // uses the last format
-moment("05-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"]);          // uses the first format
-```
-
-You may also specify a locale and strictness argument. They work the same as the single format case.
+ * 优先使用能生成[有效][parsing_is-valid]日期（而不是无效日期）的格式。 
+ * 优先使用能解析更多（而不是更少）字符串的格式，且优先使用解析更多（而不是更少）的格式，即优先更严格的解析。
+ * 优先使用在数组中前面（而不是后面）的格式。
 
 ```js
-moment("29-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr');       // uses 'fr' locale
-moment("29-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], true);       // uses strict parsing
-moment("05-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr', true); // uses 'fr' locale and strict parsing
+moment("29-06-1995", ["MM-DD-YYYY", "DD-MM", "DD-MM-YYYY"]); // 使用最后一种格式。
+moment("05-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"]);          // 使用第一种格式
 ```
 
-**Note:** Parsing multiple formats is considerably slower than parsing a single format. If you can avoid it, it is much faster to parse a single format.
+还可以指定区域设置和严格性参数。
+它们的工作方式与单一格式的情况相同。
+
+```js
+moment("29-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr');       // 使用 'fr' 区域设置。
+moment("29-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], true);       // 使用严格的解析。
+moment("05-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr', true); // 使用 'fr' 区域设置和严格的解析。
+```
+
+注意：解析多种格式比解析单一格式要慢得多。
+如果可以避免，则解析单一格式要快得多。
+

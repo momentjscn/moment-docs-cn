@@ -10,4 +10,5 @@ title: 浏览器
 </script>
 ```
 
-Moment.js is available on [cdnjs.com](https://cdnjs.com/libraries/moment.js) and on [jsDelivr](https://www.jsdelivr.com/package/npm/moment).
+Moment.js 在 [cdnjs.com][cdnjs_moment] 和 [jsDelivr][jsdelivr_moment] 上可用。
+

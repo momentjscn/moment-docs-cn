@@ -3,18 +3,23 @@ title: 解析
 ---
 
 
-Instead of modifying the native `Date.prototype`, Moment.js creates a wrapper for the `Date` object. To get this wrapper object, simply call `moment()` with one of the supported input types.
+Moment.js 会为 `Date` 对象创建封装器，而不是修改本地的 `Date.prototype`。
+若要获取此封装器对象，则只需使用一种受支持的输入类型调用 `moment()` 即可。
 
-The `Moment` prototype is exposed through `moment.fn`. If you want to add your own functions, that is where you would put them.
+`Moment` 原型通过 `moment.fn` 公开。
+如果要添加自己的函数，则可以在其中放置它们。
 
-For ease of reference, any method on the `Moment.prototype` will be referenced in the docs as `moment#method`. So `Moment.prototype.format` == `moment.fn.format` == `moment#format`.
+为了便于参考，`Moment.prototype` 上的任何方法都将会在文档中称为 `moment＃method`。
+因此 `Moment.prototype.format` == `moment.fn.format` == `moment＃format`。
 
-**Please read:**
-* `moment(...)` is local mode. Ambiguous input (without offset) is assumed to be local time. Unambiguous input (with offset) is adjusted to local time.
-* `moment.utc(...)` is utc mode. Ambiguous input is assumed to be UTC. Unambiguous input is adjusted to UTC.
-* `moment.parseZone()` keep the input zone passed in. If the input is ambiguous, it is the same as local mode.
-* `moment.tz(...)` with the moment-timezone plugin can parse input in a specific time zone.
+**请阅读：**
+* `moment(...)` 是本地模式。不明确的输入（无偏移量）会被假定为本地时间。明确的输入（带偏移量）会被调整为本地时间。
+* `moment.utc(...)` 是 utc 模式。不明确的输入会被假定为 UTC。明确的输入会被调整为 UTC。
+* `moment.parseZone()` 会保持输入的区域被传入。如果输入不明确，则与本地模式相同。
+* `moment.tz(...)` 使用 moment-timezone 插件可以以特定的时区来解析输入。
 
-Keep in mind that a time zone and a time zone offset are two different things. An offset of -08:00 doesn't necessarily mean you are in the US Pacific time zone.
+记住，时区和时区偏移是两件事。 
+-08:00 的偏移量不一定意味着你处于美国太平洋时区。
 
-[See the Parsing Guide for additional information](https://momentjs.com/guides/#/parsing/).
+[有关其他信息，参见解析指南][guides_parsing]。
+

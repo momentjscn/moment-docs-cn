@@ -3,14 +3,14 @@ title: Typescript
 version: 2.13.0
 ---
 
-As of version **2.13.0**, Moment includes a typescript definition file.
+从 2.13.0 版本开始，Moment 会包含一个 typescript 定义文件。
 
-Install via NPM
+通过NPM安装。
 ```
 npm install moment
 ```
 
-Import and use in your Typescript file
+导入并在你的 Typescript 文件中使用。
 <!-- skip-example -->
 
 ```javascript
@@ -19,9 +19,10 @@ import * as moment from 'moment';
 let now = moment().format('LLLL');
 ```
 
-**Note:** If you have trouble importing moment
+如果你在导入时遇到麻烦。
 
-For _Typescript 2.x_ try adding ```"moduleResolution": "node"``` in ```compilerOptions``` in your ```tsconfig.json``` file and then use any of the below syntax
+对于 Typescript 2.x，则尝试在 ```tsconfig.json``` 文件中的 ```compileOptions``` 中添加 ```"moduleResolution": "node"```，然后使用以下任何语法：
+
 <!-- skip-example -->
 
 ```javascript
@@ -29,16 +30,17 @@ import * as moment from 'moment';
 import moment = require('moment');
 ```
 
-For _Typescript 1.x_ try adding ```"allowSyntheticDefaultImports": true``` in ```compilerOptions``` in your ```tsconfig.json``` file and then use the syntax
+对于 Typescript 1.x，则尝试在 ```tsconfig.json``` 文件中的 ```compileOptions``` 中添加 ```"allowSyntheticDefaultImports": true```，然后使用语法：
+
 <!-- skip-example -->
 
 ```javascript
 import moment from 'moment';
 ```
 
-**Locale Import**
+**区域设置导入**
 
-To use `moment.locale` you first need to import the language you are targeting.
+若要使用 `moment.locale`，则首先需要导入要使用的语言。
 
 <!-- skip-example -->
 

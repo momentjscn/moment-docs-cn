@@ -6,10 +6,11 @@ signature: |
 ---
 
 
-Similar to `new Date(Number)`, you can create a moment by passing an integer value representing the number of *milliseconds* since the Unix Epoch (Jan 1 1970 12AM UTC).
+与 `new Date(Number)` 类似，可以通过传入一个整数值来创建 moment，该整数值表示自 Unix 纪元（1970 年 1 月 1 日 12AM UTC）以来的毫秒数。
 
 ```javascript
 var day = moment(1318781876406);
 ```
 
-<a href="https://www.ecma-international.org/ecma-262/6.0/#sec-time-values-and-time-range" target="_blank" > Note: ECMAScript calls this a "Time Value" </a>
+[注意：ECMAScript 将此称为“时间值”][sec-time-values-and-time-range]。
+

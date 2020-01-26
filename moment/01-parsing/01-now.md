@@ -4,25 +4,25 @@ version: 1.0.0
 signature: |
   moment();
   moment(undefined);
-  // From 2.14.0 onward, also supported
+  // 从 2.14.0 开始，也受支持。
   moment([]);
   moment({});
 ---
 
 
-To get the current date and time, just call `moment()` with no parameters.
+要获取当前的日期和时间，只需调用不带参数的 `moment()` 即可。
 
 ```javascript
 var now = moment();
 ```
 
-This is essentially the same as calling `moment(new Date())`.
+这基本上与调用 `moment(new Date())` 相同。
 
-**Note:** From version **2.14.0**, `moment([])` and `moment({})` also return
-now. They used to default to start-of-today before 2.14.0, but that was
-arbitrary so it was changed.
+从 2.14.0 版本开始，`moment([])` 和 `moment({})` 也返回当前时间。 
+在 2.14.0 之前，它们默认为今天开始，但这是随意的，因此已更改。
 
-**Note:** Function parameters default to `undefined` when not passed in. Moment treats `moment(undefined)` as `moment()`.
+函数参数在未传入时默认为 `undefined`。
+Moment 会将 `moment(undefined)` 视作 `moment()`。
 
 ```javascript
 var x = undefined;

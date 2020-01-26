@@ -6,11 +6,11 @@ signature: |
 ---
 
 
-You can create a `Moment` with a pre-existing native Javascript `Date` object.
+可以使用预先存在的原生 Javascript Date 对象来创建 `Moment`。
 
 ```javascript
 var day = new Date(2011, 9, 16);
 var dayWrapper = moment(day);
 ```
 
-This clones the `Date` object; further changes to the `Date` won't affect the `Moment`, and vice-versa.
+这会克隆 `Date` 对象，`Date` 的后续更改不会影响 `Moment`，反之亦然。

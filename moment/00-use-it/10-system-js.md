@@ -2,8 +2,8 @@
 title: System.js
 ---
 
-To load moment, place it in the path specified by your System.config in the baseURL configuration.
-Then import it into your page.
+若要加载 moment，则将其放置在 baseURL 配置中的 System.config 指定的路径中。 
+然后将其导入页面。
 
 <!-- skip-example -->
 
@@ -18,8 +18,7 @@ Then import it into your page.
  </script>
 ```
 
-
-If you need moment to be loaded as global, you can do this with the meta configuration:
+如果需要将 moment 加载为全局变量，则可以使用元配置：
 
 <!-- skip-example -->
 
@@ -31,7 +30,7 @@ System.config({
 });
 ```
 
-Alternatively, to provide Moment as a global to only a specific dependency, you can do this:
+另外，若要将 Moment 作为全局仅提供给特定的依赖项，则可以如下操作：
 
 <!-- skip-example -->
 
