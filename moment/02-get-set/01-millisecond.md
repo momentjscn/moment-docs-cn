@@ -3,12 +3,14 @@ title: millisecond()
 version: 1.3.0
 signature: |
   moment().millisecond(Number);
-  moment().millisecond(); // Number
+  moment().millisecond(); // 数字
   moment().milliseconds(Number);
-  moment().milliseconds(); // Number
+  moment().milliseconds(); // 数字
 ---
 
 
-Gets or sets the milliseconds.
+获取或设置毫秒。
 
-Accepts numbers from 0 to 999. If the range is exceeded, it will bubble up to the seconds.
+接受 0 到 999 之间的数字。
+如果超出范围，则它将会冒泡到秒钟。
+

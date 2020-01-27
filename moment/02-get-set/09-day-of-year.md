@@ -3,10 +3,12 @@ title: dayOfYear()
 version: 2.0.0
 signature: |
   moment().dayOfYear(Number);
-  moment().dayOfYear(); // Number
+  moment().dayOfYear(); // 数字
 ---
 
 
-Gets or sets the day of the year.
+获取或设置年份的日期。
 
-Accepts numbers from 1 to 366. If the range is exceeded, it will bubble up to the years.
+接受 1 到 366 之间的数字。
+如果超出范围，则它将会冒泡到年份。
+

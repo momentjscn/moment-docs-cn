@@ -3,12 +3,13 @@ title: isoWeek()
 version: 2.0.0
 signature: |
   moment().isoWeek(Number);
-  moment().isoWeek(); // Number
+  moment().isoWeek(); // 数字
   moment().isoWeeks(Number);
-  moment().isoWeeks(); // Number
+  moment().isoWeeks(); // 数字
 ---
 
 
-Gets or sets the [ISO week of the year](https://en.wikipedia.org/wiki/ISO_week_date).
+获取或设置[年份的 ISO 星期][ISO_week_date]。
 
-When setting the week of the year, the day of the week is retained.
+当设置年份的星期时，将会保留星期几。
+

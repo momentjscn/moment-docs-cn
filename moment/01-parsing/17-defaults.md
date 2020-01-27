@@ -6,32 +6,33 @@ signature: |
 ---
 
 
-You can create a moment object specifying only some of the units, and the rest
-will be defaulted to the current day, month or year, or 0 for hours, minutes,
-seconds and milliseconds.
+可以创建一个 moment 对象，仅指定一些单位，其余的将会默认为当前的日期、月份、年份，小时、分钟、秒钟和毫秒默认为 0 。
 
-Defaulting to now, when nothing is passed:
+当没传入任何值时，默认为现在时间：
+
 ```javascript
-moment();  // current date and time
+moment();  // 当前的日期和时间。
 ```
 
-Defaulting to today, when only hours, minutes, seconds and milliseconds are passed:
+当仅传入小时、分钟、秒钟和毫秒时，默认为今天：
 ```javascript
-moment(5, "HH");  // today, 5:00:00.000
-moment({hour: 5});  // today, 5:00:00.000
-moment({hour: 5, minute: 10});  // today, 5:10.00.000
-moment({hour: 5, minute: 10, seconds: 20});  // today, 5:10.20.000
-moment({hour: 5, minute: 10, seconds: 20, milliseconds: 300});  // today, 5:10.20.300
+moment(5, "HH");  // 今天 5:00:00.000
+moment({hour: 5});  // 今天 5:00:00.000
+moment({hour: 5, minute: 10});  // 今天 5:10.00.000
+moment({hour: 5, minute: 10, seconds: 20});  // 今天 5:10.20.000
+moment({hour: 5, minute: 10, seconds: 20, milliseconds: 300});  // 今天 5:10.20.300
 ```
 
-Defaulting to this month and year, when only days and smaller units are passed:
+当仅传入日期和更小的单位时，默认为本月和今年：
+
 ```javascript
-moment(5, "DD");  // this month, 5th day-of-month
-moment("4 05:06:07", "DD hh:mm:ss");  // this month, 4th day-of-month, 05:06:07.000
+moment(5, "DD");  // 本月的第 5 天
+moment("4 05:06:07", "DD hh:mm:ss");  // 本月的第 4 天 05:06:07.000
 ```
 
-Defaulting to this year, if year is not specified:
+如果未指定年份，则默认为今年：
+
 ```javascript
-moment(3, "MM");  // this year, 3rd month (March)
-moment("Apr 4 05:06:07", "MMM DD hh:mm:ss");  // this year, 4th April, 05:06:07.000
+moment(3, "MM");  // 今年第三个月（三月）
+moment("Apr 4 05:06:07", "MMM DD hh:mm:ss");  // 今年四月的第 4 天 05:06:07.000
 ```

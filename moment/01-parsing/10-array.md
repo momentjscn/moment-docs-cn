@@ -6,7 +6,7 @@ signature: |
 ---
 
 
-You can create a moment with an array of numbers that mirror the parameters passed to [new Date()](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date)
+可以使用数值的数组（映射传给 [new Date()][JavaScript_Date] 的参数）来创建 moment。
 
 `[year, month, day, hour, minute, second, millisecond]`
 
@@ -14,7 +14,7 @@ You can create a moment with an array of numbers that mirror the parameters pass
 moment([2010, 1, 14, 15, 25, 50, 125]); // February 14th, 3:25:50.125 PM
 ```
 
-Any value past the year is optional, and will default to the lowest possible number.
+年份之后的任何值都是可选的，并且默认为可能的最小值。
 
 ```javascript
 moment([2010]);        // January 1st
@@ -22,20 +22,22 @@ moment([2010, 6]);     // July 1st
 moment([2010, 6, 10]); // July 10th
 ```
 
-Construction with an array will create a date in the current time zone. To create a date from an array at UTC, use `moment.utc(Number[])`.
+使用数组的构造将会在当前时区中创建一个日期。 
+若要从 UTC 数组创建日期，则使用 `moment.utc(Number[])`。
 
 ```javascript
 moment.utc([2010, 1, 14, 15, 25, 50, 125]);
 ```
 
-**Note:** Because this mirrors the native `Date` parameters, months, hours, minutes, seconds, and milliseconds are all zero indexed. Years and days of the month are 1 indexed.
+注意：因为这映射了原生的 `Date` 参数，所以月份，小时，分钟，秒钟、毫秒都是零索引的。 
+年份、月份的日期则是 1 索引的。
 
-This is often the cause of frustration, especially with months, so take note!
+这通常是混乱的原因，尤其是月份，因此请注意！
 
-If the date represented by the array does not exist, `moment#isValid` will return false.
+如果数组代表的日期不存在，则 `moment#isValid` 将会返回 false。
 
 ```javascript
-moment([2010, 12]).isValid();     // false (not a real month)
-moment([2010, 10, 31]).isValid(); // false (not a real day)
-moment([2010, 1, 29]).isValid();  // false (not a leap year)
+moment([2010, 12]).isValid();     // false（不是真实的月份）
+moment([2010, 10, 31]).isValid(); // false（不是真实的日期）
+moment([2010, 1, 29]).isValid();  // false（不是闰年）
 ```

@@ -3,20 +3,21 @@ title: isoWeekday()
 version: 2.1.0
 signature: |
   moment().isoWeekday(Number);
-  moment().isoWeekday(); // Number
+  moment().isoWeekday(); // 数字
 ---
 
 
-Gets or sets the [ISO day of the week](https://en.wikipedia.org/wiki/ISO_week_date) with `1` being Monday and `7` being Sunday.
+获取或设置 [ISO 星期几][ISO_week_date]，其中 `1` 是星期一、`7` 是星期日。
 
-As with `moment#day`, if the range is exceeded, it will bubble up to other weeks.
+与 `moment#day` 一样，如果超出范围，则它将会冒泡到其他星期。
 
 ```javascript
-moment().isoWeekday(1); // Monday
-moment().isoWeekday(7); // Sunday
+moment().isoWeekday(1); // 星期一
+moment().isoWeekday(7); // 星期日
 ```
 
-A day name is also supported. This is parsed in the moment's current locale.
+还支持星期名称。 
+这是在 moment 当前的区域设置中解析的。
 
 ```javascript
 moment().isoWeekday("Sunday");

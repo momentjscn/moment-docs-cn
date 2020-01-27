@@ -3,12 +3,14 @@ title: second()
 version: 1.0.0
 signature: |
   moment().second(Number);
-  moment().second(); // Number
+  moment().second(); // 数字
   moment().seconds(Number);
-  moment().seconds(); // Number
+  moment().seconds(); // 数字
 ---
 
 
-Gets or sets the seconds.
+获取或设置秒钟。
 
-Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the minutes.
+接受 0 到 59 之间的数字。
+如果超出范围，则它将会冒泡到分钟。
+

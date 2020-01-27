@@ -5,10 +5,10 @@ signature: |
   moment(Moment);
 ---
 
+所有的 moment 都是可变的。 
+如果想要克隆 moment，则可以隐式或显式地操作。
 
-All moments are mutable. If you want a clone of a moment, you can do so implicitly or explicitly.
-
-Calling `moment()` on a moment will clone it.
+在 moment  上调用 `moment()` 将会克隆它。
 
 ```javascript
 var a = moment([2012]);
@@ -17,7 +17,7 @@ a.year(2000);
 b.year(); // 2012
 ```
 
-Additionally, you can call `moment#clone` to clone a moment.
+此外，也可以调用 `moment#clone` 克隆 moment。
 
 ```javascript
 var a = moment([2012]);

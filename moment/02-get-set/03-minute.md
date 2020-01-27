@@ -3,12 +3,14 @@ title: minute()
 version: 1.0.0
 signature: |
   moment().minute(Number);
-  moment().minute(); // Number
+  moment().minute(); // 数字
   moment().minutes(Number);
-  moment().minutes(); // Number
+  moment().minutes(); // 数字
 ---
 
 
-Gets or sets the minutes.
+获取或设置分钟。
 
-Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the hour.
+接受 0 到 59 之间的数字。
+如果超出范围，则它将会冒泡到小时。
+

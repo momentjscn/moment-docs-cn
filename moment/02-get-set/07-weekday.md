@@ -3,22 +3,21 @@ title: weekday()
 version: 2.1.0
 signature: |
   moment().weekday(Number);
-  moment().weekday(); // Number
+  moment().weekday(); // 数字
 ---
 
+根据区域设置获取或设置星期几。
 
-Gets or sets the day of the week according to the locale.
+如果区域设置将星期一指定为一周的第一天，则 `moment().weekday(0)` 将会是星期一。
+如果星期日是一周的第一天，则 `moment().weekday(0)` 将会是星期日。
 
-If the locale assigns Monday as the first day of the week, `moment().weekday(0)` will be Monday.
-If Sunday is the first day of the week, `moment().weekday(0)` will be Sunday.
-
-As with `moment#day`, if the range is exceeded, it will bubble up to other weeks.
+与 `moment#day` 一样，如果超出范围，则它将会冒泡到其他星期。
 
 ```javascript
-// when Monday is the first day of the week
-moment().weekday(-7); // last Monday
-moment().weekday(7); // next Monday
-// when Sunday is the first day of the week
-moment().weekday(-7); // last Sunday
-moment().weekday(7); // next Sunday
+// 当星期一是一周的第一天时。
+moment().weekday(-7); // 上个星期一
+moment().weekday(7); // 下个星期一
+// 当星期日是一周的第一天时。
+moment().weekday(-7); // 上个星期日
+moment().weekday(7); // 下个星期日
 ```

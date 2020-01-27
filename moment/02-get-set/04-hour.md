@@ -3,12 +3,14 @@ title: hour()
 version: 1.0.0
 signature: |
   moment().hour(Number);
-  moment().hour(); // Number
+  moment().hour(); // 数字
   moment().hours(Number);
-  moment().hours(); // Number
+  moment().hours(); // 数字
 ---
 
 
-Gets or sets the hour.
+获取或设置小时。
 
-Accepts numbers from 0 to 23. If the range is exceeded, it will bubble up to the day.
+接受 0 到 23 之间的数字。
+如果超出范围，则它将会冒泡到日期。
+
