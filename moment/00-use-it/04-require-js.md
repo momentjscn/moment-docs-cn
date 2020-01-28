@@ -3,7 +3,7 @@ title: Require.js
 ---
 
 如果你打算将 moment 与 Require.js 结合使用，则强烈建议你阅读[此内容][requirejs_issues_1554]。 
-另外，请升级到 2.14.0 或更高版本以获得最佳体验。
+另外，请升级到 **2.14.0** 或更高版本以获得最佳体验。
 
 首先，你可能需要通过 bower 或 node_modules 或其他方式将 moment.js 以及区域设置目录放置在基层文件夹中来获取 moment。 
 然后，你可以使用 [adapt-pkg-main] 之类的工具、或者手动使用[包配置][requirejs_packages_config]。
@@ -79,11 +79,11 @@ require.config({
 如果未指定 `noGlobal`，则全局导出的 moment 将会打印弃用警告。 
 从下一个主要版本开始，如果你需要这种行为，则必须自行导出。
 
-对于 2.5.x 版本，如果使用依赖 Moment 但与 AMD 不兼容的其他插件，则可能需要在 r.js 配置中添加 [`wrapShim: true`][jrburke_rjs_wrapshim]。
+对于 **2.5.x** 版本，如果使用依赖 Moment 但与 AMD 不兼容的其他插件，则可能需要在 r.js 配置中添加 [`wrapShim: true`][jrburke_rjs_wrapshim]。
 
 为了使 moment.js 插件可以在 requirejs 环境中被加载，moment 会被创建为一个命名模块。 
 因此，必须使用 `paths` 来确定目录，将 moment 完全按 `"moment"` 加载。 
 使用 `"vendor\moment"` 之类的路径引入 moment 将会返回 `undefined`。
 
-从 2.9.0 版本开始，moment 会将自身导出为匿名模块，因此，如果仅使用核心模块（不使用区域设置或插件），则将其放置在非标准位置时不需要配置。
+从 **2.9.0** 版本开始，moment 会将自身导出为匿名模块，因此，如果仅使用核心模块（不使用区域设置或插件），则将其放置在非标准位置时不需要配置。
 

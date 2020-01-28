@@ -3,7 +3,7 @@ title: Typescript
 version: 2.13.0
 ---
 
-从 2.13.0 版本开始，Moment 会包含一个 typescript 定义文件。
+从 **2.13.0** 版本开始，Moment 会包含一个 typescript 定义文件。
 
 通过NPM安装。
 ```

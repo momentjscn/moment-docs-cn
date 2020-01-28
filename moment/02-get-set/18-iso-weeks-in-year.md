@@ -6,4 +6,4 @@ signature: |
 ---
 
 
-Gets the number of weeks in the current moment's year, according to [ISO weeks](https://en.wikipedia.org/wiki/ISO_week_date).
+根据 [ISO 星期][ISO_week_date]获取当前 moment 年份的周数。

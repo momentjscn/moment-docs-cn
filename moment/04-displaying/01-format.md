@@ -6,11 +6,11 @@ signature: |
   moment().format(String);
 ---
 
-
-This is the most robust display option. It takes a string of tokens and replaces them with their corresponding values.
+这是最稳健的显示选项。
+它接受一串令牌并将其替换为其相应的值。
 
 ```javascript
-moment().format();                                // "2014-09-08T08:02:17-05:00" (ISO 8601, no fractional seconds)
+moment().format();                                // "2014-09-08T08:02:17-05:00" (ISO 8601，无小数秒钟)
 moment().format("dddd, MMMM Do YYYY, h:mm:ss a"); // "Sunday, February 14th 2010, 3:25:50 pm"
 moment().format("ddd, hA");                       // "Sun, 3PM"
 moment('gibberish').format('YYYY MM DD');         // "Invalid date"
@@ -20,11 +20,11 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
   <tbody>
     <tr>
       <th></th>
-      <th>Token</th>
-      <th>Output</th>
+      <th>令牌</th>
+      <th>输出</th>
     </tr>
     <tr>
-      <td><b>Month</b></td>
+      <td><b>月份</b></td>
       <td>M</td>
       <td>1 2 ... 11 12</td>
     </tr>
@@ -49,7 +49,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>January February ... November December</td>
     </tr>
     <tr>
-      <td><b>Quarter</b></td>
+      <td><b>季度</b></td>
       <td>Q</td>
       <td>1 2 3 4</td>
     </tr>
@@ -59,7 +59,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>1st 2nd 3rd 4th</td>
     </tr>
     <tr>
-      <td><b>Day of Month</b></td>
+      <td><b>月份的日期</b></td>
       <td>D</td>
       <td>1 2 ... 30 31</td>
     </tr>
@@ -74,7 +74,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>01 02 ... 30 31</td>
     </tr>
     <tr>
-      <td><b>Day of Year</b></td>
+      <td><b>年份的日期</b></td>
       <td>DDD</td>
       <td>1 2 ... 364 365</td>
     </tr>
@@ -89,7 +89,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>001 002 ... 364 365</td>
     </tr>
     <tr>
-      <td><b>Day of Week</b></td>
+      <td><b>星期几</b></td>
       <td>d</td>
       <td>0 1 ... 5 6</td>
     </tr>
@@ -114,17 +114,17 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>Sunday Monday ... Friday Saturday</td>
     </tr>
     <tr>
-      <td><b>Day of Week (Locale)</b></td>
+      <td><b>星期几（区域设置）</b></td>
       <td>e</td>
       <td>0 1 ... 5 6</td>
     </tr>
     <tr>
-      <td><b>Day of Week (ISO)</b></td>
+      <td><b>星期几（ISO）</b></td>
       <td>E</td>
       <td>1 2 ... 6 7</td>
     </tr>
     <tr>
-      <td><b>Week of Year</b></td>
+      <td><b>年份的星期</b></td>
       <td>w</td>
       <td>1 2 ... 52 53</td>
     </tr>
@@ -139,7 +139,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>01 02 ... 52 53</td>
     </tr>
     <tr>
-      <td><b>Week of Year (ISO)</b></td>
+      <td><b>年份的星期（ISO）</b></td>
       <td>W</td>
       <td>1 2 ... 52 53</td>
     </tr>
@@ -154,7 +154,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>01 02 ... 52 53</td>
     </tr>
     <tr>
-      <td><b>Year</b></td>
+      <td><b>年份</b></td>
       <td>YY</td>
       <td>70 71 ... 29 30</td>
     </tr>
@@ -168,11 +168,11 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>Y</td>
       <td>1970 1971 ... 9999 +10000 +10001
         <br />
-        <b>Note:</b> This complies with the ISO 8601 standard for dates past the year 9999
+	注意：对于 9999 年以后的日期，这符合 ISO 8601 标准。
       </td>
     </tr>
     <tr>
-      <td><b>Week Year</b></td>
+      <td><b>周年</b></td>
       <td>gg</td>
       <td>70 71 ... 29 30</td>
     </tr>
@@ -182,7 +182,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>1970 1971 ... 2029 2030</td>
     </tr>
     <tr>
-      <td><b>Week Year (ISO)</b></td>
+      <td><b>周年（ISO）</b></td>
       <td>GG</td>
       <td>70 71 ... 29 30</td>
     </tr>
@@ -192,7 +192,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>1970 1971 ... 2029 2030</td>
     </tr>
     <tr>
-      <td><b>AM/PM</b></td>
+      <td><b>子午线</b></td>
       <td>A</td>
       <td>AM PM</td>
     </tr>
@@ -202,7 +202,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>am pm</td>
     </tr>
     <tr>
-      <td><b>Hour</b></td>
+      <td><b>小时</b></td>
       <td>H</td>
       <td>0 1 ... 22 23</td>
     </tr>
@@ -232,7 +232,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>01 02 ... 23 24</td>
     </tr>
     <tr>
-      <td><b>Minute</b></td>
+      <td><b>分钟</b></td>
       <td>m</td>
       <td>0 1 ... 58 59</td>
     </tr>
@@ -242,7 +242,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>00 01 ... 58 59</td>
     </tr>
     <tr>
-      <td><b>Second</b></td>
+      <td><b>秒钟</b></td>
       <td>s</td>
       <td>0 1 ... 58 59</td>
     </tr>
@@ -252,7 +252,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>00 01 ... 58 59</td>
     </tr>
     <tr>
-      <td><b>Fractional Second</b></td>
+      <td><b>小数秒钟</b></td>
       <td>S</td>
       <td>0 1 ... 8 9</td>
     </tr>
@@ -272,13 +272,14 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>000[0..] 001[0..] ... 998[0..] 999[0..]</td>
     </tr>
     <tr>
-      <td><b>Time Zone</b></td>
+      <td><b>时区</b></td>
       <td>z or zz</td>
       <td>
         EST CST ... MST PST
         <br/>
-        <b>Note:</b> as of <b>1.6.0</b>, the z/zz format tokens have been deprecated from plain moment objects. <a href="https://github.com/moment/moment/issues/162">Read more about it here.</a>
-        However, they *do* work if you are using a specific time zone with the moment-timezone addon.
+	注意：从 <b>1.6.0</b> 版本开始，z/zz 格式的令牌已从普通的 moment 对象中弃用。
+	<a href="https://github.com/moment/moment/issues/162">在此处了解更多信息</a>。
+	但是，如果将特定时区与 moment-timezone 插件一起使用，它们会起作用。
       </td>
     </tr>
     <tr>
@@ -294,49 +295,50 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       </td>
     </tr>
     <tr>
-      <td><b>Unix Timestamp</b></td>
+      <td><b>Unix 时间戳</b></td>
       <td>X</td>
       <td>1360013296</td>
     </tr>
     <tr>
-      <td><b>Unix Millisecond Timestamp</b></td>
+      <td><b>Unix 毫秒时间戳</b></td>
       <td>x</td>
       <td>1360013296123</td>
     </tr>
   </tbody>
 </table>
 
-`X` was added in **2.0.0**.
+`X` 新增于 **2.0.0**。
 
-`e E gg gggg GG GGGG` were added in **2.1.0**.
+`e E gg gggg GG GGGG` 新增于 **2.1.0**。
 
-`x` was added in **2.8.4**.
+`x` 新增于 **2.8.4**。
 
-`SSSS` to `SSSSSSSSS` were added in **2.10.5**. They display 3 significant
-digits and the rest is filled with zeros.
+`SSSS` 至 `SSSSSSSSS` 新增于 **2.10.5**。
+它们会显示 3 位有效数字，其余部分用零填充。
 
-`k` and `kk` were added in **2.13.0**.
+`k` 和 `kk` 新增于 **2.13.0**。
 
-#### Localized formats
+#### 本地化格式
 
-Because preferred formatting differs based on locale, there are a few tokens that can be used to format a moment based on its locale.
+由于首选的格式会根据区域设置而有所不同，因此有一些令牌可用于根据区域设置格式 moment。
 
-There are upper and lower case variations on the same formats. The lowercase version is intended to be the shortened version of its uppercase counterpart.
+同一格式有大小写变体。
+小写版本旨在作为大写版本的简化版本。
 
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><b>Time</b></td>
+      <td><b>时间</b></td>
       <td>LT</td>
       <td>8:30 PM</td>
     </tr>
     <tr>
-      <td><b>Time with seconds</b></td>
+      <td><b>带秒钟的时间</b></td>
       <td>LTS</td>
       <td>8:30:25 PM</td>
     </tr>
     <tr>
-      <td><b>Month numeral, day of month, year</b></td>
+      <td><b>月份数字，月份日期，年份</b></td>
       <td>L</td>
       <td>09/04/1986</td>
     </tr>
@@ -346,7 +348,7 @@ There are upper and lower case variations on the same formats. The lowercase ver
       <td>9/4/1986</td>
     </tr>
     <tr>
-      <td><b>Month name, day of month, year</b></td>
+      <td><b>月份名称，月份日期，年份</b></td>
       <td>LL</td>
       <td>September 4, 1986</td>
     </tr>
@@ -356,7 +358,7 @@ There are upper and lower case variations on the same formats. The lowercase ver
       <td>Sep 4, 1986</td>
     </tr>
     <tr>
-      <td><b>Month name, day of month, year, time</b></td>
+      <td><b>月份名称，月份日期，年份，时间</b></td>
       <td>LLL</td>
       <td>September 4, 1986 8:30 PM</td>
     </tr>
@@ -366,7 +368,7 @@ There are upper and lower case variations on the same formats. The lowercase ver
       <td>Sep 4, 1986 8:30 PM</td>
     </tr>
     <tr>
-      <td><b>Month name, day of month, day of week, year, time</b></td>
+      <td><b>月份名称，月份日期，星期几，年份，时间</b></td>
       <td>LLLL</td>
       <td>Thursday, September 4, 1986 8:30 PM</td>
     </tr>
@@ -378,45 +380,50 @@ There are upper and lower case variations on the same formats. The lowercase ver
   </tbody>
 </table>
 
-`l ll lll llll` are available in **2.0.0**.
-`LTS` was added in **2.8.4**.
+`l ll lll llll` 在 **2.0.0** 中可用。
+`LTS` 新增于 **2.8.4**。
 
-#### Escaping characters
+#### 转义字符
 
-To escape characters in format strings, you can wrap the characters in square brackets.
+要转义格式字符串中的字符，可以将字符包装在方括号中。
 
 ```javascript
-moment().format('[today] dddd'); // 'today Sunday'
+moment().format('[今天] dddd'); // '今天 Sunday'
 ```
 
-#### Similarities and differences with LDML
+#### 与 LDML 的异同
 
-**Note:** While these date formats are very similar to LDML date formats, there are a few minor differences regarding day of month, day of year, and day of week.
+注意：虽然这些日期格式与 LDML 日期格式非常相似，但是在月份的日期、年份的日期、星期几等方面存在一些细微的差异。
 
-For a breakdown of a few different date formatting tokens across different locales, see [this chart of date formatting tokens.](https://docs.google.com/spreadsheet/ccc?key=0AtgZluze7WMJdDBOLUZfSFIzenIwOHNjaWZoeGFqbWc&amp;hl=en_US#gid=0)
+有关跨不同区域设置的一些不同的日期格式令牌的详细信息，参阅[日期格式令牌的图表][date_formatting_tokens_chart]。
 
-#### Formatting speed
+#### 格式化速度
 
-To compare Moment.js formatting speed against other libraries, check out [this comparison against other libraries](https://jsperf.com/date-formatting/49).
+要与其他库比较 Moment.js 的格式化速度，请差异[与其他库的比较][date_formatting_comparison]。
 
-#### Other tokens
 
-If you are more comfortable working with strftime instead of LDML-like parsing tokens, you can use Ben Oakes' plugin. [benjaminoakes/moment-strftime](https://github.com/benjaminoakes/moment-strftime).
+#### 其他令牌
 
-#### Default format
+如果更习惯使用 strftime 而不是类似 LDML 的解析令牌，则可以使用 Ben Oakes 的插件 [benjaminoakes/moment-strftime][moment-strftime]。
 
-Calling `moment#format` without a format will default to `moment.defaultFormat`. Out of the box, `moment.defaultFormat` is the ISO8601 format `YYYY-MM-DDTHH:mm:ssZ`.
+#### 默认的格式
 
-As of version **2.13.0**, when in UTC mode, the default format is governed by `moment.defaultFormatUtc` which is in the format `YYYY-MM-DDTHH:mm:ss[Z]`. This returns ``Z`` as the offset, instead of ``+00:00``. 
+不使用格式调用 `moment#format` 将会默认为 `moment.defaultFormat`。
+开箱即用的 `moment.defaultFormat` 是 ISO8601 格式 `YYYY-MM-DDTHH:mm:ssZ`。
 
-In certain instances, a local timezone (such as `Atlantic/Reykjavik`) may have a zero offset, and will be considered to be UTC. In such cases, it may be useful to set `moment.defaultFormat` and `moment.defaultFormatUtc` to use the same formatting.
+从 **2.13.0** 版本开始，当在 UTC 模式中时，默认的格式由 `moment.defaultFormatUtc` 管理的，其格式是 `YYYY-MM-DDTHH:mm:ss[Z]`。
+这会返回 ``Z`` 作为偏移量，而不是 ``+00:00``。
 
-Changing the value of `moment.defaultFormat` will only affect formatting, and will not affect parsing. for example:
+在某些情况下，本地时区（例如 `Atlantic/Reykjavik`）可能具有零偏移量，且将会被视为 UTC。
+在这种情况下，将 `moment.defaultFormat` 和 `moment.defaultFormatUtc` 设置为使用相同的格式可能很有用。
+
+更改 `moment.defaultFormat` 的值仅会影响格式化，而不会影响解析。
+例如：
 
 ```javascript
 moment.defaultFormat = "DD.MM.YYYY HH:mm";
-// parse with .toDate()
+// 使用 .toDate() 解析。
 moment('20.07.2018 09:19').toDate() // Invalid date
-// format the date string with the new defaultFormat then parse
+// 使用新的 defaultFormat 格式化日期字符串，然后解析。
 moment('20.07.2018 09:19', moment.defaultFormat).toDate() // Fri Jul 20 2018 09:19:00 GMT+0300
 ```

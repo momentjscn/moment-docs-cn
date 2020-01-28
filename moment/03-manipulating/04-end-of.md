@@ -5,17 +5,16 @@ signature: |
   moment().endOf(String);
 ---
 
+通过将原始的 moment 设置为时间单位的末尾来对其进行更改。
 
-Mutates the original moment by setting it to the end of a unit of time.
-
-This is the same as `moment#startOf`, only instead of setting to the start of a unit of time, it sets to the end of a unit of time.
+这与 `moment#startOf` 相同，只是将其设置为时间单位的末尾，而不是设置为时间单位的开头。
 
 ```javascript
-moment().endOf("year"); // set the moment to 12-31 23:59:59.999 this year
+moment().endOf("year"); // 将 moment 设置为今年的 12 月 31 日 23:59:59.999
 ```
 
-As of version **2.0.0**, `moment#endOf('day')` replaced `moment#eod`.
+从 **2.0.0** 版本开始，`moment#endOf('day')` 替代 `moment#eod`。
 
-**Note:** `moment#endOf('week')` was added in version **2.0.0**.
+注意：`moment#endOf('week')` 新增于 **2.0.0** 版本。
 
-As of version **2.1.0**, `moment#endOf('week')` uses the locale aware week start day.
+从 **2.1.0** 版本开始，`moment#endOf('week')` 使用区域设置敏感的星期开始日期。

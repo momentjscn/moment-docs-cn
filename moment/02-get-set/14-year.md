@@ -3,14 +3,16 @@ title: year()
 version: 1.0.0
 signature: |
   moment().year(Number);
-  moment().year(); // Number
+  moment().year(); // 数字
   moment().years(Number);
-  moment().years(); // Number
+  moment().years(); // 数字
 ---
 
 
-Gets or sets the year.
+获取或设置年份。
 
-Accepts numbers from -270,000 to 270,000.
+接受 -270,000 至 270,000 之间的数字。
 
-**2.6.0** deprecated using ``moment().years()``. Use ``moment().year()`` instead.
+**2.6.0** 废弃使用 ``moment().years()``。 
+改用 ``moment().year()``。
+

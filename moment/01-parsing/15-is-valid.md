@@ -27,7 +27,7 @@ moment([2015, 25, 35]).format();   // 'Invalid date'
  * `invalidFormat`: 空的格式列表，例如 `moment('2013-05-25', [])`。布尔值。
  * `userInvalidated`: 显式地创建为无效的日期，例如 `moment.invalid()`。布尔值。
 
- 除上述内容外，从 2.13.0 开始，meridiem 和 parsedDateParts 标志也可以一起判断日期的有效性。
+ 除上述内容外，从 **2.13.0** 开始，meridiem 和 parsedDateParts 标志也可以一起判断日期的有效性。
  
  * `meridiem`: 表明解析的子午线（AM/PM），如果有的话。字符串。
  * `parsedDateParts`: 返回按降序解析的日期片段的数组，即 parsedDateParts[0] === 年份。 如果没有片段，但子午线有值，则日期无效。数组。
@@ -37,7 +37,7 @@ moment([2015, 25, 35]).format();   // 'Invalid date'
  * `unusedTokens`: 在输入的字符串中找不到格式数组的子字符串。
  * `unusedInput`: 输入的子字符串数组与格式字符串不匹配。
 
-注意：Moment 的有效性概念在 2.2 和 2.3 之间变得更加严格和一致。 
+注意：Moment 的有效性概念在 **2.2** 和 **2.3** 之间变得更加严格和一致。 
 注意：有效性在创建 moment 时确定。 
 修改的 moment（即 `moment().hour(NaN)`）将会保持有效。
 

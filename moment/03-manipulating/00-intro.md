@@ -3,14 +3,19 @@ title: 操作
 ---
 
 
-Once you have a `Moment`, you may want to manipulate it in some way. There are a number of methods to help with this.
+一旦有了 `Moment`，则可能需要以某些方式对其进行操作。
+有很多方法可以帮助处理此需求。
 
-Moment.js uses the [fluent interface pattern](https://en.wikipedia.org/wiki/Fluent_interface), also known as [method chaining](https://en.wikipedia.org/wiki/Method_chaining). This allows you to do crazy things like the following.
+Moment.js 使用[流式的接口模式][Fluent_interface]，也称为[方法链][Method_chaining]。
+这使得可以执行以下疯狂的操作。
 
 ```javascript
 moment().add(7, 'days').subtract(1, 'months').year(2009).hours(0).minutes(0).seconds(0);
 ```
 
-**Note:** It should be noted that moments are mutable. Calling any of the manipulation methods will change the original moment.
+注意：moment 是可变的。
+调用任何一种操作方法都会改变原始的 moment。
 
-If you want to create a copy and manipulate it, you should use `moment#clone` before manipulating the moment. [More info on cloning.](#/parsing/moment-clone/)
+如果要创建副本并对其进行操作，则应在操作 moment 之前使用 `moment#clone`。
+[查看有关克隆的更多信息][moment-clone]。
+

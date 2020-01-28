@@ -5,23 +5,22 @@ signature: |
   moment().startOf(String);
 ---
 
-
-Mutates the original moment by setting it to the start of a unit of time.
+通过将原始的 moment 设置为时间单位的开头来对其进行更改。
 
 ```javascript
-moment().startOf('year');    // set to January 1st, 12:00 am this year
-moment().startOf('month');   // set to the first of this month, 12:00 am
-moment().startOf('quarter');  // set to the beginning of the current quarter, 1st day of months, 12:00 am
-moment().startOf('week');    // set to the first day of this week, 12:00 am
-moment().startOf('isoWeek'); // set to the first day of this week according to ISO 8601, 12:00 am
-moment().startOf('day');     // set to 12:00 am today
-moment().startOf('date');     // set to 12:00 am today
-moment().startOf('hour');    // set to now, but with 0 mins, 0 secs, and 0 ms
-moment().startOf('minute');  // set to now, but with 0 seconds and 0 milliseconds
-moment().startOf('second');  // same as moment().milliseconds(0);
+moment().startOf('year');    // 设置为今年一月1日上午 12:00
+moment().startOf('month');   // 设置为本月1日上午 12:00
+moment().startOf('quarter');  // 设置为当前季度的开始，即每月的第一天上午 12:00
+moment().startOf('week');    // 设置为本周的第一天上午 12:00
+moment().startOf('isoWeek'); // 根据 ISO 8601 设置为本周的第一天上午 12:00
+moment().startOf('day');     // 设置为今天上午 12:00
+moment().startOf('date');     // 设置为今天上午 12:00
+moment().startOf('hour');    // 设置为当前时间，但是 0 分钟、0 秒钟、0 毫秒
+moment().startOf('minute');  // 设置为当前时间，但是 0 秒钟、0 毫秒
+moment().startOf('second');  // 与 moment().milliseconds(0); 相同
 ```
 
-These shortcuts are essentially the same as the following.
+这些快捷方式与以下的基本相同。
 
 ```javascript
 moment().startOf('year');
@@ -33,12 +32,12 @@ moment().startOf('hour');
 moment().minutes(0).seconds(0).milliseconds(0)
 ```
 
-As of version **2.0.0**, `moment#startOf('day')` replaced `moment#sod`.
+从 **2.0.0** 版本开始，`moment#startOf('day')` 替代 `moment#sod`。
 
-**Note:** `moment#startOf('week')` was added in version **2.0.0**.
+注意：`moment#startOf('week')` 新增于 **2.0.0** 版本。
 
-As of version **2.1.0**, `moment#startOf('week')` uses the locale aware week start day.
+从 **2.1.0** 版本开始，`moment#startOf('week')` 使用区域设置敏感的星期开始日期。
 
-**Note:** `moment#startOf('isoWeek')` was added in version **2.2.0**.
+注意：`moment#startOf('isoWeek')` 新增于 **2.2.0** 版本。
 
-**Note:** `moment#startOf('date')` was added as an alias for day in **2.13.0**
+注意：`moment#startOf('date')` 作为 day 的别名新增于 **2.13.0**。

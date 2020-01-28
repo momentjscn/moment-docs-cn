@@ -3,8 +3,9 @@ title: isoWeekYear()
 version: 2.1.0
 signature: |
   moment().isoWeekYear(Number);
-  moment().isoWeekYear(); // Number
+  moment().isoWeekYear(); // 数字
 ---
 
 
-Gets or sets the [ISO week-year](https://en.wikipedia.org/wiki/ISO_week_date).
+获取或设置 [ISO 周年][ISO_week_date]。
+

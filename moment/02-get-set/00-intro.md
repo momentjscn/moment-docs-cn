@@ -21,10 +21,10 @@ moment.utc().seconds(30).valueOf() === new Date().setUTCSeconds(30);
 moment.utc().seconds()   === new Date().getUTCSeconds();
 ```
 
-为了方便起见，从 2.0.0 版本开始，单数和复数的方法名称都会存在。
+为了方便起见，从 **2.0.0** 版本开始，单数和复数的方法名称都会存在。
 
 注意：当作为 setter 使用时，所有这些方法在都会改变原始的 moment。
 
-注意：从 2.19.0 开始，将 `NaN` 传给任何 setter 都是没有操作的。 
-在 2.19.0 之前，它以错误的方式使 moment 无效。
+注意：从 **2.19.0** 开始，将 `NaN` 传给任何 setter 都是没有操作的。 
+在 **2.19.0** 之前，它以错误的方式使 moment 无效。
 

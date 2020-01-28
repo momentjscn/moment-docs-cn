@@ -3,34 +3,38 @@ title: month()
 version: 1.0.0
 signature: |
   moment().month(Number|String);
-  moment().month(); // Number
+  moment().month(); // 数字
   moment().months(Number|String);
-  moment().months(); // Number
+  moment().months(); // 数字
 ---
 
 
-Gets or sets the month.
+获取或设置月份。
 
-Accepts numbers from 0 to 11. If the range is exceeded, it will bubble up to the year.
+接受 0 到 11 之间的数字。
+如果超出范围，则它将会冒泡到年份。
 
-**Note:** Months are zero indexed, so January is month 0.
+注意：月份是零索引的，因此一月是月份 0。
 
-As of **2.1.0**, a month name is also supported. This is parsed in the moment's current locale.
+从 **2.1.0** 版本开始，还支持月份名称。
+这是在 moment 的当前区域设置中解析的。
 
 ```javascript
 moment().month("January");
 moment().month("Feb");
 ```
 
-Before version **2.1.0**, if a moment changed months and the new month did not have enough days to keep the current day of month, it would overflow to the next month.
+在 **2.1.0** 版本之前，如果 moment 更改了月份，且新的月份没有足够的天数来保留该月份的当前日期，则它将会溢出到下个月份。
 
-As of version **2.1.0**, this was changed to be clamped to the end of the target month.
+从 **2.1.0** 版本开始，已将其更改为限制在目标月份的月末。
 
 ```javascript
-// before 2.1.0
+// 2.1.0 之前
 moment([2012, 0, 31]).month(1).format("YYYY-MM-DD"); // 2012-03-02
-// after 2.1.0
+// 2.1.0 之后
 moment([2012, 0, 31]).month(1).format("YYYY-MM-DD"); // 2012-02-29
 ```
 
-**2.16.0** deprecated using ``moment().months()``. Use ``moment().month()`` instead.
+**2.16.0** 废弃使用 ``moment().months()``。
+改用 ``moment().month()``。
+

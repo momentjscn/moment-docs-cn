@@ -3,12 +3,16 @@ title: weekYear()
 version: 2.1.0
 signature: |
   moment().weekYear(Number);
-  moment().weekYear(); // Number
+  moment().weekYear(); // 数字
 ---
 
 
-Gets or sets the week-year according to the locale.
+根据区域设置获取或设置周年。
 
-Because the first day of the first week does not always fall on the first day of the year, sometimes the week-year will differ from the month year.
+因为第一周的第一天并不总是在一年的第一天，所以有时周年与月年会有所不同。
 
-For example, in the US, the week that contains Jan 1 is always the first week. In the US, weeks also start on Sunday. If Jan 1 was a Monday, Dec 31 would belong to the same week as Jan 1, and thus the same week-year as Jan 1. Dec 30 would have a different week-year than Dec 31.
+例如，在美国，包含 1 月 1 日的星期始终是第一周。
+在美国，星期也从星期日开始。
+如果 1 月 1 日是星期一，则 12 月 31 日与 1 月 1 日属于同一周，因此与 1 月 1 日的周年相同。
+12 月 30 日则与 12 月 31 日是不同的周年。
+

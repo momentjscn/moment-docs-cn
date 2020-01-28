@@ -5,8 +5,7 @@ signature: |
   moment().utc();
 ---
 
-
-Sets a flag on the original moment to use UTC to display a moment instead of the original moment's time.
+在原始的 moment 上设置标记，以使用 UTC（而不是原始的 moment 时间）显示 moment。
 
 ```javascript
 var a = moment([2011, 0, 1, 8]);
@@ -15,10 +14,11 @@ a.utc();
 a.hours(); // 16 UTC
 ```
 
-UTC can also be used to convert out of a fixed offset mode:
+也可以用于转换出固定的偏移模式：
 
 ```javascript
 moment.parseZone('2016-05-03T22:15:01+02:00').utc().format(); //"2016-05-03T20:15:01Z"
 ```
 
-See [moment.utc()](#/parsing/utc/) for more information on UTC mode.
+有关 UTC 模式的更多信息，参阅 [moment.utc()][moment.utc]。
+

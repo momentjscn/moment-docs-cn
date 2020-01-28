@@ -6,9 +6,10 @@ signature: |
   moment.min(Moment[]);
 ---
 
-Returns the minimum (most distant past) of the given moment instances.
+返回给定的 moment 实例的最小值（最远的过去）。
 
-For example:
+例如：
+
 ```javascript
 var a = moment().subtract(1, 'day');
 var b = moment().add(1, 'day');
@@ -16,10 +17,9 @@ moment.min(a, b);  // a
 moment.min([a, b]); // a
 ```
 
-With no arguments the function returns a moment instance with the current time.
+不带参数的函数会返回带有当前时间的 moment 实例。
 
-From version **2.10.5**, if an invalid moment is one of the arguments, the result
-is an invalid moment.
+从 **2.10.5** 版本开始，如果其中一个参数是无效的 moment ，则结果为无效的 moment。
 
 ```javascript
 moment.min(moment(), moment.invalid()).isValid() === false

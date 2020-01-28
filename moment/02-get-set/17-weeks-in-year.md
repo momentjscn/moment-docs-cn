@@ -6,4 +6,4 @@ signature: |
 ---
 
 
-Gets the number of weeks according to locale in the current moment's year.
+根据区域设置获取当前 moment 年份的周数。

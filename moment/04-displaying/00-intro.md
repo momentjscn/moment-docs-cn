@@ -3,4 +3,4 @@ title: 显示
 ---
 
 
-Once parsing and manipulation are done, you need some way to display the moment.
+一旦解析和操作完成后，需要某些方式来显示 moment。

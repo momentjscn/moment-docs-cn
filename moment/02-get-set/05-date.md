@@ -24,6 +24,6 @@ signature: |
 
 正确：`moment().year(year).month(month).date(day)`
 
-2.16.0 起废弃使用 ``moment().dates()``。
+**2.16.0** 起废弃使用 ``moment().dates()``。
 改用 ``moment().date()``。
 

@@ -21,9 +21,9 @@ moment({ years:'2010', months:'3', date:'5', hours:'15', minutes:'10', seconds:'
 
 `day` 和 `date` 键均表示月份的某天。
 
-`date` 新增于 2.8.4。
+`date` 新增于 **2.8.4**。
 
-从 2.11.0 版本开始，支持字符串值（如最后一行示例所示）。
+从 **2.11.0** 版本开始，支持字符串值（如最后一行示例所示）。
 
 注意，像 `moment(Array)` 和 `new Date(year, month, date)` 一样，月份从 0 开始索引。
 
