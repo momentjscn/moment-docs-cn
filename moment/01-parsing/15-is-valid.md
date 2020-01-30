@@ -85,7 +85,7 @@ m.invalidAt(); // 5 表示秒钟
 
 以下会生成 `'InvalidDate'` 的本地化版本：
 
-* `invalid.format(anyFmt)` 在当前区域设置中导致 `'Invalid Date'`。
+* `invalid.format(anyFmt)` 在当前语言环境中导致 `'Invalid Date'`。
 * `invalid.from(another)`
 * `another.from(invalid)`
 * `invalid.fromNow(suffix)`

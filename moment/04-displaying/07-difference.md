@@ -7,8 +7,7 @@ signature: |
   moment().diff(Moment|String|Number|Date|Array, String, Boolean);
 ---
 
-
-To get the difference in milliseconds, use `moment#diff` like you would use `moment#from`.
+要获取以毫秒为单位的差异，则像使用 `moment#from` 一样使用 `moment#diff`。
 
 ```javascript
 var a = moment([2007, 0, 29]);
@@ -16,7 +15,7 @@ var b = moment([2007, 0, 28]);
 a.diff(b) // 86400000
 ```
 
-To get the difference in another unit of measurement, pass that measurement as the second argument.
+要获取另一个度量单位中的差异，则将该度量作为第二个参数传入。
 
 ```javascript
 var a = moment([2007, 0, 29]);
@@ -24,11 +23,16 @@ var b = moment([2007, 0, 28]);
 a.diff(b, 'days') // 1
 ```
 
-To get the duration of a difference between two moments, you can pass `diff` as an argument into `moment#duration`. See the docs on [moment#duration](#/durations/diffing/) for more info.
+要获取两个时刻之间的差值的时长，则可以将 `diff` 作为参数传给 `moment#duration`。
+有关更多信息，参阅 [moment#duration][moment.duration] 上的文档。
 
-The supported measurements are `years`, `months`, `weeks`, `days`, `hours`, `minutes`, and `seconds`. For ease of development, the singular forms are supported as of **2.0.0**. Units of measurement other than milliseconds are available in version **1.1.1**.
+支持的度量有 `years`、`months`、`weeks`、`days`、`hours`、`minutes` 和 `seconds`。
+为了便于开发，从 **2.0.0** 版本开始支持单数形式。
+**1.1.1** 版本中提供了毫秒以外的度量单位。
 
-By default, `moment#diff` will truncate the result to zero decimal places, returning an integer. If you want a floating point number, pass `true` as the third argument. Before **2.0.0**, `moment#diff` returned a number rounded to the nearest integer, not a truncated number.
+默认情况下，`moment#diff` 会将结果截断为零个小数位，并返回一个整数。
+如果需要浮点数，则将 `true` 作为第三个参数传入。
+在 **2.0.0** 之前，`moment#diff` 返回的数字会四舍五入到最接近的整数，而不是截断的数字。
 
 ```javascript
 var a = moment([2008, 9]);
@@ -37,7 +41,7 @@ a.diff(b, 'years');       // 1
 a.diff(b, 'years', true); // 1.75
 ```
 
-If the moment is earlier than the moment you are passing to `moment.fn.diff`, the return value will be negative.
+如果该时刻早于传给 `moment.fn.diff` 的时刻，则返回值为负数。
 
 ```javascript
 var a = moment();
@@ -46,7 +50,7 @@ a.diff(b) // -1000
 b.diff(a) // 1000
 ```
 
-An easy way to think of this is by replacing `.diff(` with a minus operator.
+考虑这一点的一种简单方法是将 `.diff(` 替换为减号运算符。
 
 ```javascript
           // a < b
@@ -54,17 +58,19 @@ a.diff(b) // a - b < 0
 b.diff(a) // b - a > 0
 ```
 
-#### Month and year diffs
+#### 月份和年份的差异
 
-`moment#diff` has some special handling for month and year diffs. It is optimized to ensure that two months with the same date are always a whole number apart.
+`moment#diff` 对月份和年份的差异进行一些特殊处理。
+它做了一些优化，以确保具有相同日期的两个月始终是整数。
 
-So Jan 15 to Feb 15 should be exactly 1 month.
+因此，1月15日至2月15日应该恰好是1个月。
 
-Feb 28 to Mar 28 should be exactly 1 month.
+2月28日至3月28日应该恰好是1个月。
 
-Feb 28 2011 to Feb 28 2012 should be exactly 1 year.
+2011年2月28日至2012年2月28日应该恰好是1年。
 
-[See more discussion on the month and year diffs here](https://github.com/moment/moment/pull/571)
+[在此处查看有关月份和年份的差异的更多讨论][moment_pull_571]。
 
-This change to month and year diffs was made in **2.0.0**.
-As of version **2.9.0** diff also support quarter unit.
+对月份和年份的差异的更改于 **2.0.0**。
+从 **2.9.0** 版本开始，diff 还支持季度单位。
+

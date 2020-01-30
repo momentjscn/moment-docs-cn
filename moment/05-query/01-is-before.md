@@ -6,33 +6,31 @@ signature: |
   moment().isBefore(Moment|String|Number|Date|Array, String);
 ---
 
-
-Check if a moment is before another moment. The first argument will be parsed as a moment, if not already so.
+检查一个 moment 是否在另一个 moment 之前。
+第一个参数会被解析为 moment（如果尚未解析）。
 
 ```javascript
 moment('2010-10-20').isBefore('2010-10-21'); // true
 ```
 
-If you want to limit the granularity to a unit other than milliseconds, pass the units as the second parameter.
+如果要将粒度限制为毫秒以外的单位，则将单位作为第二个参数传入。
 
-As the second parameter determines the precision, and not just a single value to check, using day will check for year, month and day.
+由于第二个参数用于确定精度，且不仅仅是要检查的单个值，因此使用 day 将会检查年份、月份、日期。
 
 ```javascript
 moment('2010-10-20').isBefore('2010-12-31', 'year'); // false
 moment('2010-10-20').isBefore('2011-01-01', 'year'); // true
 ```
 
-Like `moment#isAfter` and `moment#isSame`, any of the units of time that are supported for `moment#startOf` are supported for `moment#isBefore`.
+与 `moment#isAfter` 和 `moment#isSame` 一样，`moment#startOf` 支持的任何时间单位也适用于 `moment#isBefore`。
 
 ```
 year month week isoWeek day hour minute second
 ```
 
-If nothing is passed to `moment#isBefore`, it will default to the current time.
+如果未将任何内容传给 `moment#isBefore`，则它将会默认为当前时间。
 
-*NOTE*: `moment().isBefore()` has undefined behavior and should not be used! If
-the code runs fast the initial created moment would be the same as the one
-created in isBefore to perform the check, so the result would be `false`. But
-if the code runs slower it's possible that the moment created in isBefore is
-measurably after the one created in `moment()`, so the call would return
-`true`.
+注意：`moment().isBefore()` 具有未定义的行为，且不应被使用！
+如果代码运行快速，则初始创建的 moment 将会与isBefore 中创建的要执行检查的相同，因此结果将会为 `false`。
+但是，如果代码运行速度较慢，则有可能在 isBefore 中创建的 moment 可测量地在 `moment()` 中创建的之后，因此该调用将会返回 `true`。
+

@@ -38,7 +38,7 @@ import moment = require('moment');
 import moment from 'moment';
 ```
 
-**区域设置导入**
+**语言环境导入**
 
 若要使用 `moment.locale`，则首先需要导入要使用的语言。
 

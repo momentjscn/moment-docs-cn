@@ -5,8 +5,7 @@ signature: |
   moment().toJSON();
 ---
 
-
-When serializing an object to JSON, if there is a `Moment` object, it will be represented as an ISO8601 string, adjusted to UTC.
+当将对象序列化为 JSON 时，如果有 `Moment` 对象，则它会将被解释为 ISO8601 字符串，并调整到 UTC。
 
 ```javascript
 JSON.stringify({
@@ -14,13 +13,13 @@ JSON.stringify({
 }); // '{"postDate":"2013-02-04T22:44:30.652Z"}'
 ```
 
-If instead you would like an ISO8601 string that reflects the moment's `utcOffset()`, then you can modify the `toJSON` function like this:
+如果希望使用一个 ISO8601 字符串来反映该 moment 的 `utcOffset()`，则可以像这样修改 `toJSON` 函数：
 
 ```javascript
 moment.fn.toJSON = function() { return this.format(); }
 ```
 
-This changes the behavior as follows:
+这会更改行为，如下所示：
 
 ```javascript
 JSON.stringify({

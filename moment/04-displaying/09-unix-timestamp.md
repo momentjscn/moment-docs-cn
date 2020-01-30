@@ -6,10 +6,11 @@ signature: |
 ---
 
 
-`moment#unix` outputs a Unix timestamp (the number of seconds since the Unix Epoch).
+`moment#unix` 输出 Unix 时间戳（自 Unix 纪元以来的秒数）
 
 ```javascript
 moment(1318874398806).unix(); // 1318874398
 ```
 
-This value is floored to the nearest second, and does not include a milliseconds component.
+此值的下限为最接近的秒数，且不包括毫秒部分。
+

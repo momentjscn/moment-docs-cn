@@ -28,7 +28,7 @@ require('moment/locale/cs');
 console.log(moment.locale()); // cs
 ```
 
-为了包含所有的区域设置。
+为了包含所有的语言环境。
 
 ```javascript
 var moment = require('moment');

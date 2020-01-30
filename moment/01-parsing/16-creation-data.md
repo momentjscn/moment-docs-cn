@@ -13,7 +13,7 @@ signature: |
 moment("2013-01-02", "YYYY-MM-DD", true).creationData() === {
     input: "2013-01-02",
     format: "YYYY-MM-DD",
-    locale: 区域设置对象,
+    locale: 语言环境对象,
     isUTC: false,
     strict: true
 }

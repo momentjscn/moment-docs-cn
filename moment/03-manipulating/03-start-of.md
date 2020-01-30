@@ -36,7 +36,7 @@ moment().minutes(0).seconds(0).milliseconds(0)
 
 注意：`moment#startOf('week')` 新增于 **2.0.0** 版本。
 
-从 **2.1.0** 版本开始，`moment#startOf('week')` 使用区域设置敏感的星期开始日期。
+从 **2.1.0** 版本开始，`moment#startOf('week')` 使用语言环境敏感的星期开始日期。
 
 注意：`moment#startOf('isoWeek')` 新增于 **2.2.0** 版本。
 

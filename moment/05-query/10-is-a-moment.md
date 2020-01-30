@@ -5,8 +5,7 @@ signature: |
   moment.isMoment(obj);
 ---
 
-
-To check if a variable is a moment object, use `moment.isMoment()`.
+要检查变量是否为 moment 对象，则使用 `moment.isMoment()`。
 
 ```javascript
 moment.isMoment() // false
@@ -14,8 +13,8 @@ moment.isMoment(new Date()) // false
 moment.isMoment(moment()) // true
 ```
 
-From version **2.11.0**, you can also test for a moment object by `instanceof`
-operator:
+从 **2.11.0** 版本开始，还可以通过 `instanceof` 运算符检测 moment 对象：
+
 
 ```javascript
 moment() instanceof moment // true

@@ -6,97 +6,95 @@ signature: |
   moment().toNow(Boolean);
 ---
 
+显示时间的常用方法是通过 `moment#toNow` 处理。
+有时称为时间间隔或相对时间。
 
-A common way of displaying time is handled by `moment#toNow`. This is sometimes called timeago or relative time.
+这类似于 [`moment.fromNow`][moment.fromNow]，但给出相反的间隔：`a.fromNow() = - a.toNow()`。
 
-This is similar to [`moment.fromNow`](/docs/#/displaying/fromnow/), but gives
-the opposite interval: `a.fromNow() = - a.toNow()`.
-
-This is similar to [`moment.to`](/docs/#/displaying/to/), but is special-cased
-for the current time. Use `moment.to`, if you want to control the two end
-points of the interval.
+这类似于 [`moment.to`][moment.to]，但在当前时间有特殊情况。
+如果要控制间隔的两个端点，则使用 `moment.to`。
 
 ```javascript
-moment([2007, 0, 29]).toNow(); // in 4 years
+moment([2007, 0, 29]).toNow(); // 4 年内
 ```
 
-If you pass `true`, you can get the value without the prefix.
+如果传入 `true`，则可以获取不带前缀的值。
 
 ```javascript
-moment([2007, 0, 29]).toNow();     // in 4 years
-moment([2007, 0, 29]).toNow(true); // 4 years
+moment([2007, 0, 29]).toNow();     // 4 年内
+moment([2007, 0, 29]).toNow(true); // 4 年
 ```
 
-The base strings are [customized by the current locale](#/customization/relative-time/).
+基本的字符串[由当前的语言环境自定义][moment-relativeTime]。
 
-The breakdown of which string is displayed for each length of time is outlined in the table below.
+下表概述了每个时间长度显示的字符串的细分。
 
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Range</th>
-      <th>Key</th>
-      <th>Sample Output</th>
+      <th>范围</th>
+      <th>键</th>
+      <th>样本输出</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>0 to 44 seconds</td>
+      <td>0 至 44 秒</td>
       <td>s</td>
-      <td>in seconds</td>
+      <td>几秒内</td>
     </tr>
     <tr>
-      <td>45 to 89 seconds</td>
+      <td>45 至 89 秒</td>
       <td>m</td>
-      <td>in a minute</td>
+      <td>1 分钟内</td>
     </tr>
     <tr>
-      <td>90 seconds to 44 minutes</td>
+      <td>90 秒至 44 分钟</td>
       <td>mm</td>
-      <td>in 2 minutes ... in 44 minutes</td>
+      <td>2 分钟内 ... 44 分钟内</td>
     </tr>
     <tr>
-      <td>45 to 89 minutes</td>
+      <td>45 至 89 分钟</td>
       <td>h</td>
-      <td>in an hour</td>
+      <td>1 小时内</td>
     </tr>
     <tr>
-      <td>90 minutes to 21 hours </td>
+      <td>90 分钟至 21 小时 </td>
       <td>hh</td>
-      <td>in 2 hours ... in 21 hours</td>
+      <td>2 小时内 ... 21 小时内</td>
     </tr>
     <tr>
-      <td>22 to 35 hours</td>
+      <td>22 至 35 小时</td>
       <td>d</td>
-      <td>in a day</td>
+      <td>1 天内</td>
     </tr>
     <tr>
-      <td>36 hours to 25 days</td>
+      <td>36 小时至 25 天</td>
       <td>dd</td>
-      <td>in 2 days ... in 25 days</td>
+      <td>2 天内 ... 25 天内</td>
     </tr>
     <tr>
-      <td>26 to 45 days</td>
+      <td>26 至 45 天</td>
       <td>M</td>
-      <td>in a month</td>
+      <td>1 个月内</td>
     </tr>
     <tr>
-      <td>45 to 319 days</td>
+      <td>45 至 319 天</td>
       <td>MM</td>
-      <td>in 2 months ... in 10 months</td>
+      <td>2 个月内 ... 10 个月内</td>
     </tr>
     <tr>
-      <td>320 to 547 days (1.5 years)</td>
+      <td>320 至 547 天 (1.5 年)</td>
       <td>y</td>
-      <td>in a year</td>
+      <td>1 年内</td>
     </tr>
     <tr>
-      <td>548 days+</td>
+      <td>548 天+</td>
       <td>yy</td>
-      <td>in 2 years ... in 20 years</td>
+      <td>2 年内 ... 20 年内</td>
     </tr>
   </tbody>
 </table>
 
-From version **2.10.3**, if the target moment object is invalid the result is
-the localized Invalid date string.
+从 **2.10.3** 版本开始，如果目标 moment 对象无效，则结果为本地化的无效日期字符串。
+

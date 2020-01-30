@@ -2,10 +2,9 @@
 title: 国际化
 ---
 
+Moment.js 对国际化具有强大的支持。
 
-Moment.js has robust support for internationalization.
+可以加载多个语言环境并在它们之间轻松地切换。
 
-You can load multiple locales and easily switch between them.
+除了分配全局的语言环境外，还可以将语言环境分配给特定的 moment。
 
-In addition to assigning a global locale, you can assign a locale to a specific
-moment.

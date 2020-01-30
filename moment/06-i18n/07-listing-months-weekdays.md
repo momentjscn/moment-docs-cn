@@ -1,5 +1,5 @@
 ---
-title: 列出当前语言的月份和星期
+title: months()/weekdays()
 version: 2.3.0
 signature: |
   moment.months()

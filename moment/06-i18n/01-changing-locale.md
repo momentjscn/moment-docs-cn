@@ -1,24 +1,24 @@
 ---
-title: 设置语言 (全局)
+title: 设置语言环境 (全局)
 version: 1.0.0
 signature: |
-  // From 2.8.1 onward
+  // 从 2.8.1 开始
   moment.locale(String);
   moment.locale(String[]);
   moment.locale(String, Object);
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang(String);
   moment.lang(String[]);
   moment.lang(String, Object);
 ---
 
+默认情况下，Moment.js 随附英语（美国）语言环境字符串。
+如果需要其他语言环境，则可以将它们加载到 Moment.js 中以供随后使用。
 
-By default, Moment.js comes with English (United States) locale strings. If you need other locales, you can load them into Moment.js for later use.
+要加载语言环境，则将键和字符串值传给 `moment.locale`。
 
-To load a locale, pass the key and the string values to `moment.locale`.
-
-More details on each of the parts of the locale bundle can be found in the [customization](#/customization/) section.
+可以在[自定义][moment_customization]章节中找到有关语言环境包的各个部分的更多详细信息。
 
 ```javascript
 moment.locale('fr', {
@@ -68,24 +68,24 @@ moment.locale('fr', {
     isPM : function (input) {
         return input.charAt(0) === 'M';
     },
-    // In case the meridiem units are not separated around 12, then implement
-    // this function (look at locale/id.js for an example).
+    // 如果子午线单位未在12左右分开，则实现此函数（以 locale/id.js 为例）。
     // meridiemHour : function (hour, meridiem) {
-    //     return /* 0-23 hour, given meridiem token and hour 1-12 */ ;
+    //     return /* 0-23 小时，给定的子午线令牌和 1-12小时 */ ;
     // },
     meridiem : function (hours, minutes, isLower) {
         return hours < 12 ? 'PD' : 'MD';
     },
     week : {
-        dow : 1, // Monday is the first day of the week.
-        doy : 4  // Used to determine first week of the year.
+        dow : 1, // 星期一是一周的第一天。
+        doy : 4  // 用于判断一年中的第一周。
     }
 });
 ```
 
-Details about `week.dow` and `week.doy` can be found in the [customization](#/customization/dow-doy/) section.
+有关 `week.dow` 和 `week.doy` 的详细信息可以在[自定义][moment_dow-doy]章节中找到。
 
-Once you load a locale, it becomes the active locale. To change active locales, simply call `moment.locale` with the key of a loaded locale.
+加载语言环境之后，则它会成为活动的语言环境。
+要更改活动的语言环境，只需使用已加载的语言环境的键调用 `moment.locale`。
 
 ```javascript
 moment.locale('fr');
@@ -94,9 +94,9 @@ moment.locale('en');
 moment(1316116057189).fromNow(); // an hour ago
 ```
 
-As of **2.21.0**, Moment will `console.warn` if the locale is unavailable.
+从 **2.21.0** 开始，如果语言环境不可用，则 Moment 将会 `console.warn`。
 
-As of **2.8.0**, changing the global locale doesn't affect existing instances.
+从 **2.8.0** 开始，更改全局的语言环境不会影响已存在的实例。
 
 ```javascript
 moment.locale('fr');
@@ -108,27 +108,30 @@ m.fromNow(); // il y a une heure
 moment(1316116057189).fromNow(); // an hour ago
 ```
 
-`moment.locale` returns the locale used. This is useful because Moment won't change locales if it doesn't know the one you specify.
+`moment.locale` 返回使用的语言环境。
+这很有用，因为如果 Moment 不知道你指定的语言环境，它就不会更改语言环境。
 
 ```javascript
 moment.locale('fr'); // 'fr'
 moment.locale('tq'); // 'fr'
 ```
 
-You may also specify a list of locales, and Moment will use the first one it has localizations for.
+也可以指定一个语言环境的列表，Moment 将会使用它具有本地化的第一个语言环境。
 
 ```javascript
 moment.locale(['tq', 'fr']); // 'fr'
 ```
 
-Moment will also try locale specifier substrings from most-specific to least-specific until it finds a locale it knows. This is useful when supplying Moment with a locale string pulled from the user's environment, such as `window.navigator.language`.
+Moment 还将会尝试从最特定到最不特定的语言环境说明符子字符串，直到找到它知道的语言环境。
+当为 Moment 提供从用户环境中拉出的语言环境字符串（例如 `window.navigator.language`）时，这很有用。
 
 ```javascript
 moment.locale('en-NZ'); // 'en'
 ```
 
-Finally, Moment will search intelligently through an array of locales and their substrings.
+最后，Moment 将会通过一系列语言环境及其子字符串进行智能搜索。
+
 
 ```javascript
-moment.locale(['en-NZ', 'en-AU']); // 'en-au', not 'en'
+moment.locale(['en-NZ', 'en-AU']); // 'en-au', 而不是 'en'
 ```

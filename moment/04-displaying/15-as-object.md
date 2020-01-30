@@ -6,8 +6,7 @@ signature: |
 ---
 
 
-This returns an object containing year, month, day-of-month, hour, minute,
-seconds, milliseconds.
+这会返回一个包含年份、月份、月份的日期、小时、分钟、秒钟、毫秒的对象。
 
 ```javascript
 moment().toObject()  // {

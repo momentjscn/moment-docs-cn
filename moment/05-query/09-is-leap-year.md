@@ -5,8 +5,7 @@ signature: |
   moment().isLeapYear();
 ---
 
-
-`moment#isLeapYear` returns `true` if that year is a leap year, and `false` if it is not.
+如果该年是闰年，则 `moment#isLeapYear` 返回 `true`，否则返回 `false`。
 
 ```javascript
 moment([2000]).isLeapYear() // true

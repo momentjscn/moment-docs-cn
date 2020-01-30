@@ -17,7 +17,7 @@ moment().isoWeekday(7); // 星期日
 ```
 
 还支持星期名称。 
-这是在 moment 当前的区域设置中解析的。
+这是在 moment 当前的语言环境中解析的。
 
 ```javascript
 moment().isoWeekday("Sunday");

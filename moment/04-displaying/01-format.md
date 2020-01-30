@@ -114,7 +114,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
       <td>Sunday Monday ... Friday Saturday</td>
     </tr>
     <tr>
-      <td><b>星期几（区域设置）</b></td>
+      <td><b>星期几（语言环境）</b></td>
       <td>e</td>
       <td>0 1 ... 5 6</td>
     </tr>
@@ -320,7 +320,7 @@ moment('gibberish').format('YYYY MM DD');         // "Invalid date"
 
 #### 本地化格式
 
-由于首选的格式会根据区域设置而有所不同，因此有一些令牌可用于根据区域设置格式 moment。
+由于首选的格式会根据语言环境而有所不同，因此有一些令牌可用于根据语言环境格式 moment。
 
 同一格式有大小写变体。
 小写版本旨在作为大写版本的简化版本。
@@ -395,7 +395,7 @@ moment().format('[今天] dddd'); // '今天 Sunday'
 
 注意：虽然这些日期格式与 LDML 日期格式非常相似，但是在月份的日期、年份的日期、星期几等方面存在一些细微的差异。
 
-有关跨不同区域设置的一些不同的日期格式令牌的详细信息，参阅[日期格式令牌的图表][date_formatting_tokens_chart]。
+有关跨不同语言环境的一些不同的日期格式令牌的详细信息，参阅[日期格式令牌的图表][date_formatting_tokens_chart]。
 
 #### 格式化速度
 

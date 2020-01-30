@@ -26,13 +26,13 @@ moment("29-06-1995", ["MM-DD-YYYY", "DD-MM", "DD-MM-YYYY"]); // 使用最后一�
 moment("05-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"]);          // 使用第一种格式
 ```
 
-还可以指定区域设置和严格性参数。
+还可以指定语言环境和严格性参数。
 它们的工作方式与单一格式的情况相同。
 
 ```js
-moment("29-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr');       // 使用 'fr' 区域设置。
+moment("29-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr');       // 使用 'fr' 语言环境。
 moment("29-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], true);       // 使用严格的解析。
-moment("05-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr', true); // 使用 'fr' 区域设置和严格的解析。
+moment("05-06-1995", ["MM-DD-YYYY", "DD-MM-YYYY"], 'fr', true); // 使用 'fr' 语言环境和严格的解析。
 ```
 
 注意：解析多种格式比解析单一格式要慢得多。

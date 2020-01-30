@@ -17,7 +17,7 @@ signature: |
 注意：月份是零索引的，因此一月是月份 0。
 
 从 **2.1.0** 版本开始，还支持月份名称。
-这是在 moment 的当前区域设置中解析的。
+这是在 moment 的当前语言环境中解析的。
 
 ```javascript
 moment().month("January");

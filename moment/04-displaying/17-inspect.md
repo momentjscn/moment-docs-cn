@@ -5,9 +5,8 @@ signature: |
   moment().inspect();
 ---
 
-Returns a machine readable string, that can be evaluated to produce the same
-moment. Because of the name its also used in node interactive shell to display
-objects.
+返回机器可读的字符串，可以对其进行评估以产生相同的 moment。
+由于其名称，它还用于节点交互式 shell 中以显示对象。
 
 ```javascript
 moment().inspect() // 'moment("2016-11-09T22:23:27.861")'
@@ -17,5 +16,5 @@ moment(new Date('nope')).inspect() // 'moment.invalid(/* Invalid Date */)'
 moment('blah', 'YYYY').inspect() // 'moment.invalid(/* blah */)'
 ```
 
-**Note:** This function is mostly intended for debugging, not all cases are
-handled precisely.
+注意：此函数主要用于调试，并非所有情况都经过精确处理。
+

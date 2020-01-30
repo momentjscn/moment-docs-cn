@@ -3,17 +3,18 @@ title: toISOString()
 version: 2.1.0
 signature: |
   moment().toISOString();
-  moment().toISOString(keepOffset); // from 2.20.0
+  moment().toISOString(keepOffset); // 从 2.20.0 开始
 ---
 
-Formats a string to the ISO8601 standard.
+将字符串格式化为 ISO8601 标准。
 
 ```javascript
 moment().toISOString() // 2013-02-04T22:44:30.652Z
 ```
 
-Note that ``.toISOString()`` returns a timestamp in UTC, even if the moment in question is in local mode. This is done to provide consistency with the specification for native JavaScript Date ``.toISOString()``, as outlined in 
-[ the ES2015 specification](https://www.ecma-international.org/ecma-262/6.0/#sec-date.prototype.toisostring). From version **2.20.0**, you may call `.toISOString(true)` to prevent UTC conversion. 
+注意，即使问题中的 moment 处于本地模式，``.toISOString()`` 也会以 UTC 返回时间戳。
+这样做是为了与 [ES2015 规范][ecma_sec-date.prototype.toisostring]中概述的原生 JavaScript Date ``.toISOString()`` 规范保持一致。
+从 **2.20.0** 版本开始，可以调用 `.toISOString(true)` 以防止 UTC 转换。
 
-From version **2.8.4** the native `Date.prototype.toISOString` is used if
-available, for performance reasons.
+从 **2.8.4** 版本开始，出于性能原因，尽可能使用原生 `Date.prototype.toISOString`。
+

@@ -7,97 +7,102 @@ signature: |
 ---
 
 
-A common way of displaying time is handled by `moment#fromNow`. This is sometimes called timeago or relative time.
+显示时间的常用方法是通过 `moment#fromNow` 处理。
+有时称为时间间隔或相对时间。
 
 ```javascript
-moment([2007, 0, 29]).fromNow(); // 4 years ago
+moment([2007, 0, 29]).fromNow(); // 4 年前
 ```
 
 If you pass `true`, you can get the value without the suffix.
+如果传入 `true`，则可以获得不带后缀的值。
 
 ```javascript
-moment([2007, 0, 29]).fromNow();     // 4 years ago
-moment([2007, 0, 29]).fromNow(true); // 4 years
+moment([2007, 0, 29]).fromNow();     // 4 年前
+moment([2007, 0, 29]).fromNow(true); // 4 年
 ```
 
-The base strings are [customized by the current locale](#/customization/relative-time/). Time is rounded to the nearest second.
+基本的字符串[由当前的语言环境自定义][moment-relativeTime]。
+时间会舍入到最接近的秒数。
 
-The breakdown of which string is displayed for each length of time is outlined in the table below.
+下表概述了每个时间长度显示的字符串的细分。
 
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Range</th>
-      <th>Key</th>
-      <th>Sample Output</th>
+      <th>范围</th>
+      <th>键</th>
+      <th>样本输出</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>0 to 44 seconds</td>
+      <td>0 至 44 秒</td>
       <td>s</td>
-      <td>a few seconds ago</td>
+      <td>几秒前</td>
     </tr>
     <tr>
-      <td><i>unset</i></td>
+      <td><i>未设定</i></td>
       <td>ss</td>
-      <td>44 seconds ago</td>
+      <td>44 秒前</td>
     </tr>
     <tr>
-      <td>45 to 89 seconds</td>
+      <td>45 至 89 秒</td>
       <td>m</td>
-      <td>a minute ago</td>
+      <td>1 分钟前</td>
     </tr>
     <tr>
-      <td>90 seconds to 44 minutes</td>
+      <td>90 秒至 44 分钟</td>
       <td>mm</td>
-      <td>2 minutes ago ... 44 minutes ago</td>
+      <td>2 分钟前 ... 44 分钟前</td>
     </tr>
     <tr>
-      <td>45 to 89 minutes</td>
+      <td>45 至 89 分钟</td>
       <td>h</td>
-      <td>an hour ago</td>
+      <td>1 小时前</td>
     </tr>
     <tr>
-      <td>90 minutes to 21 hours </td>
+      <td>90 分钟至 21 小时 </td>
       <td>hh</td>
-      <td>2 hours ago ... 21 hours ago</td>
+      <td>2 小时前 ... 21 小时前</td>
     </tr>
     <tr>
-      <td>22 to 35 hours</td>
+      <td>22 至 35 小时</td>
       <td>d</td>
-      <td>a day ago</td>
+      <td>1 天前</td>
     </tr>
     <tr>
-      <td>36 hours to 25 days</td>
+      <td>36 小时至 25 天</td>
       <td>dd</td>
-      <td>2 days ago ... 25 days ago</td>
+      <td>2 天前 ... 25 天前</td>
     </tr>
     <tr>
-      <td>26 to 45 days</td>
+      <td>26 至 45 天</td>
       <td>M</td>
-      <td>a month ago</td>
+      <td>1 个月前</td>
     </tr>
     <tr>
-      <td>45 to 319 days</td>
+      <td>45 至 319 天</td>
       <td>MM</td>
-      <td>2 months ago ... 10 months ago</td>
+      <td>2 个月前 ... 10 个月前</td>
     </tr>
     <tr>
-      <td>320 to 547 days (1.5 years)</td>
+      <td>320 至 547 天 (1.5 年)</td>
       <td>y</td>
-      <td>a year ago</td>
+      <td>1 年前</td>
     </tr>
     <tr>
-      <td>548 days+</td>
+      <td>548 天+</td>
       <td>yy</td>
-      <td>2 years ago ... 20 years ago</td>
+      <td>2 年前 ... 20 年前</td>
     </tr>
   </tbody>
 </table>
 
-**Note:** From version **2.10.3**, if the target moment object is invalid the result is the localized Invalid date string.
+注意：从 **2.10.3** 版本开始，如果目标 moment 对象无效，则结果为本地化的无效日期字符串。
 
-**Note:** The `ss` key was added in **2.18.0**. It is an optional threshold. It will never display UNLESS the user manually sets the ss threshold. Until the `ss` threshold is set, it defaults to the value of the `s` threshold minus 1 (so, invisible to the user).
-
+注意：`ss` 键新增于 **2.18.0**。
+这是一个可选的阈值。
+除非用户手动设置 ss 阈值，否则它将永远不会显示。
+在设置 `ss` 阈值之前，它默认为 `s` 阈值减去 1（因此对用户不可见）的值。
 

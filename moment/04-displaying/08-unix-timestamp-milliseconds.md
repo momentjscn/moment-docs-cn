@@ -6,14 +6,14 @@ signature: |
   +moment();
 ---
 
-
-`moment#valueOf` simply outputs the number of milliseconds since the Unix Epoch, just like `Date#valueOf`.
+`moment#valueOf` 简单地输出自 Unix 纪元以来的毫秒数，就像 `Date#valueOf` 一样。
 
 ```javascript
 moment(1318874398806).valueOf(); // 1318874398806
 +moment(1318874398806); // 1318874398806
 ```
 
-To get a Unix timestamp (the number of seconds since the epoch) from a `Moment`, use `moment#unix`.
+要从 `Moment` 获取 Unix 时间戳（自该纪元以来的秒数），则使用 `moment#unix`。
 
-<a href="https://www.ecma-international.org/ecma-262/6.0/#sec-time-values-and-time-range" target="_blank" > Note: ECMAScript calls this a "Time Value" </a>
+[注意：ECMAScript 将此称为“时间值”][sec-time-values-and-time-range]。
+

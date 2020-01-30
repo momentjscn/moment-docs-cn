@@ -19,13 +19,13 @@ moment.parseZone('2013 01 01 05 -13:00', 'YYYY MM DD HH ZZ').utcOffset(); // -78
 moment.parseZone('2013-01-01-13:00', ['DD MM YYYY ZZ', 'YYYY MM DD ZZ']).utcOffset(); // -780  (总分钟数 "-13:00");
 ```
 
-它还允许传入区域设置和严格性参数。
+它还允许传入语言环境和严格性参数。
 
 ```javascript
 moment.parseZone("2013 01 01 -13:00", 'YYYY MM DD ZZ', true).utcOffset(); // -780  (总分钟数 "-13:00")
 moment.parseZone("2013-01-01-13:00", 'YYYY MM DD ZZ', true).utcOffset(); // NaN (未通过严格性检查)
-moment.parseZone("2013 01 01 -13:00", 'YYYY MM DD ZZ', 'fr', true).utcOffset(); // -780 (带有区域设置和严格性参数)
-moment.parseZone("2013 01 01 -13:00", ['DD MM YYYY ZZ', 'YYYY MM DD ZZ'], 'fr', true).utcOffset(); // -780 (带有区域设置和严格性参数以及格式的数组)
+moment.parseZone("2013 01 01 -13:00", 'YYYY MM DD ZZ', 'fr', true).utcOffset(); // -780 (带有语言环境和严格性参数)
+moment.parseZone("2013 01 01 -13:00", ['DD MM YYYY ZZ', 'YYYY MM DD ZZ'], 'fr', true).utcOffset(); // -780 (带有语言环境和严格性参数以及格式的数组)
 ```
 
 `moment.parseZone` 等效于解析字符串并使用 `moment#utcOffset` 解析区域。

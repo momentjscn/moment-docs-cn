@@ -17,4 +17,4 @@ moment().endOf("year"); // 将 moment 设置为今年的 12 月 31 日 23:59:59.
 
 注意：`moment#endOf('week')` 新增于 **2.0.0** 版本。
 
-从 **2.1.0** 版本开始，`moment#endOf('week')` 使用区域设置敏感的星期开始日期。
+从 **2.1.0** 版本开始，`moment#endOf('week')` 使用语言环境敏感的星期开始日期。

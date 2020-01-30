@@ -1,5 +1,5 @@
 ---
-title: 获取当前语言
+title: locale()
 version: 1.6.0
 signature: |
   // From version 2.8.1 onward

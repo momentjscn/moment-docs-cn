@@ -5,7 +5,7 @@ title: Require.js
 如果你打算将 moment 与 Require.js 结合使用，则强烈建议你阅读[此内容][requirejs_issues_1554]。 
 另外，请升级到 **2.14.0** 或更高版本以获得最佳体验。
 
-首先，你可能需要通过 bower 或 node_modules 或其他方式将 moment.js 以及区域设置目录放置在基层文件夹中来获取 moment。 
+首先，你可能需要通过 bower 或 node_modules 或其他方式将 moment.js 以及语言环境目录放置在基层文件夹中来获取 moment。 
 然后，你可以使用 [adapt-pkg-main] 之类的工具、或者手动使用[包配置][requirejs_packages_config]。
 
 <!-- skip-example -->
@@ -22,7 +22,7 @@ requirejs.config({
 });
 ```
 
-通过上述的设置，你可以使用 `moment` 引入核心模块、使用 `moment/locale/de` 引入 `de` 区域设置。
+通过上述的设置，你可以使用 `moment` 引入核心模块、使用 `moment/locale/de` 引入 `de` 语言环境。
 
 <!-- skip-example -->
 
@@ -32,28 +32,28 @@ define(['moment'], function (moment) {
 	console.log(moment().format('LLLL'));  // 'Friday, June 24, 2016 1:42 AM'
 });
 
-// 具有单一区域设置的核心模块。
+// 具有单一语言环境的核心模块。
 define(['moment', 'moment/locale/de'], function (moment) {
 	moment.locale('de');
 	console.log(moment().format('LLLL')); // 'Freitag, 24. Juni 2016 01:42'
 });
 
-// 具有所有区域设置的核心模块。
+// 具有所有语言环境的核心模块。
 define(['moment/min/moment-with-locales'], function (moment) {
 	moment.locale('de');
 	console.log(moment().format('LLLL')); // 'Freitag, 24. Juni 2016 01:42'
 });
 
-// 异步加载区域设置。
+// 异步加载语言环境。
 define(['require', 'moment'], function(require, moment) {
-  // 检测到区域设置之后，在某个模块内部。 
-  // 这是在模块加载时间之前不知道区域设置的情况。
+  // 检测到语言环境之后，在某个模块内部。 
+  // 这是在模块加载时间之前不知道语言环境的情况。
   require(['moment/locale/de'], function(localeModule) {
-    // 此处已加载区域设置，但尚未使用。
+    // 此处已加载语言环境，但尚未使用。
     console.log(moment().format('LLLL'));  // 'Friday, June 24, 2016 1:42 AM'
 
     moment.locale('de');
-    // 已经正确地设置了区域设置之后使用 moment。
+    // 已经正确地设置了语言环境之后使用 moment。
     console.log(moment().format('LLLL')); // 'Freitag, 24. Juni 2016 01:42'
   })
 });
@@ -85,5 +85,5 @@ require.config({
 因此，必须使用 `paths` 来确定目录，将 moment 完全按 `"moment"` 加载。 
 使用 `"vendor\moment"` 之类的路径引入 moment 将会返回 `undefined`。
 
-从 **2.9.0** 版本开始，moment 会将自身导出为匿名模块，因此，如果仅使用核心模块（不使用区域设置或插件），则将其放置在非标准位置时不需要配置。
+从 **2.9.0** 版本开始，moment 会将自身导出为匿名模块，因此，如果仅使用核心模块（不使用语言环境或插件），则将其放置在非标准位置时不需要配置。
 

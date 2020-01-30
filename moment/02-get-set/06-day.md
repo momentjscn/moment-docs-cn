@@ -27,7 +27,7 @@ moment().day(24); // 从现在起第 3 个星期三 (3 + 7 + 7 + 7)
 注意：`Moment#date` 是月份的日期，而 `Moment#day` 是星期几。
 
 从 **2.1.0** 版开始，还支持星期名称。
-这是在 moment 当前的区域设置中解析的。
+这是在 moment 当前的语言环境中解析的。
 
 ```javascript
 moment().day("Sunday");

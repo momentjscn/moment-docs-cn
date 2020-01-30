@@ -5,8 +5,7 @@ signature: |
   moment().daysInMonth();
 ---
 
-
-Get the number of days in the current month.
+获取当月的天数。
 
 ```javascript
 moment("2012-02", "YYYY-MM").daysInMonth() // 29
