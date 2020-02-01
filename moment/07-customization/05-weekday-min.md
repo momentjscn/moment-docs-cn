@@ -2,7 +2,7 @@
 title: weekdaysMin
 version: 1.7.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       weekdaysMin : String[]
   });
@@ -10,7 +10,7 @@ signature: |
       weekdaysMin : Function
   });
 
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       weekdaysMin : String[]
   });
@@ -18,7 +18,7 @@ signature: |
       weekdaysMin : Function
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       weekdaysMin : String[]
   });
@@ -28,7 +28,8 @@ signature: |
 ---
 
 
-`Locale#weekdaysMin` should be an array of two letter weekday abbreviations. The purpose of these is for things like calendar pickers, thus they should be as small as possible.
+`Locale#weekdaysMin` 应是两个字母的工作日缩写的数组。
+它们的目的是用于日历选择器之类的，因此它们应尽可能短小。
 
 ```javascript
 moment.updateLocale('en', {
@@ -36,7 +37,7 @@ moment.updateLocale('en', {
 });
 ```
 
-`Locale#weekdaysMin` can be a callback function as well.
+`Locale#weekdaysMin` 也可以是回调函数。
 
 ```javascript
 moment.updateLocale('en', {

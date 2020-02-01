@@ -2,23 +2,23 @@
 title: relativeTime
 version: 1.0.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       relativeTime : Object
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       relativeTime : Object
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       relativeTime : Object
   });
 ---
 
 
-`Locale#relativeTime` should be an object of the replacement strings for `moment#from`.
+`Locale#relativeTime` 应是用于 `moment#from` 的替换字符串的对象。
 
 ```javascript
 moment.updateLocale('en', {
@@ -41,10 +41,11 @@ moment.updateLocale('en', {
 });
 ```
 
-`Locale#relativeTime.future` refers to the prefix/suffix for future dates, and `Locale#relativeTime.past` refers to the prefix/suffix for past dates. For all others, a single character refers to the singular, and a double character refers to the plural.
+`Locale#relativeTime.future` 指向未来日期的前缀/后缀，而 `Locale#relativeTime.past` 则指向过去日期的前缀/后缀。
+对于所有其他字符，单个字符指向单数，而双字符指向复数。
 
-If a locale requires additional processing for a token, it can set the token as a function with the following signature.
-The function should return a string.
+如果语言环境需要对令牌进行其他处理，则可以使用以下签名将令牌设置为函数。
+该函数应返回一个字符串。
 
 <!-- skip-example -->
 
@@ -54,10 +55,12 @@ function (number, withoutSuffix, key, isFuture) {
 }
 ```
 
-The `key` argument refers to the replacement key in the `Locale#relativeTime ` object. (eg. `s m mm h`, etc.)
+`key` 参数指向 `Locale#relativeTime ` 对象中的替换键。（例如 `s m mm h` 等）
 
-The `number` argument refers to the number of units for that key. For `m`, the number is the number of minutes, etc.
+`number` 参数指向该键的单位数。
+对于 `m`，该数字是分钟数，以此类推。
 
-The `withoutSuffix` argument will be true if the token will be displayed without a suffix, and false if it will be displayed with a suffix. (The reason for the inverted logic is because the default behavior is to display with the suffix.)
+如果不带后缀显示令牌，则 `withoutSuffix` 参数将会为 true，如果带后缀显示令牌，则为 false。（之所以使用逻辑倒置，是因为默认的行为是显示后缀。）
 
-The `isFuture` argument will be true if it is going to use the future suffix/prefix and false if it is going to use the past prefix/suffix.
+如果要使用未来的后缀/前缀，则 `isFuture` 参数将会为 true，如果要使用过去的前缀/后缀，则为 false。
+

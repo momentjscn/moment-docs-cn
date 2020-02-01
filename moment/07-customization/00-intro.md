@@ -2,17 +2,17 @@
 title: 自定义
 ---
 
-
-Moment.js is very easy to customize. In general, you should create a locale setting with your customizations.
+Moment.js 非常容易自定义。
+通常，应该使用自定义创建语言环境。
 
 ```javascript
 moment.locale('en-my-settings', {
-    // customizations.
+    // 自定义
 });
 ```
 
-You can remove a previously defined locale by passing `null` as the second argument.
-The deleted locale will no longer be available for use.
+可以通过传入 `null` 作为第二个参数来移除先前定义的语言环境。
+删除的语言环境将不再可用。
 
 ```javascript
 moment.locale('fr'); // 'fr'
@@ -21,7 +21,7 @@ moment.locale('fr', null);
 moment.locale('fr'); // 'en'
 ```
 
-As of **2.12.0** it is possible to create a locale that inherits from a parent locale.
+从 **2.12.0** 开始，可以创建从父语言环境继承的语言环境。
 
 ```javascript
 moment.defineLocale('en-foo', {
@@ -29,17 +29,19 @@ moment.defineLocale('en-foo', {
   /* */
 });
 ```
-Properties that are not specified in the locale will be inherited from the parent locale.
 
-As of **2.16.0** it is possible to define a locale with a parent that hasn't itself been defined or loaded.
+在语言环境中未指定的属性将会从父语言环境中继承。
+
+从 **2.16.0** 版本开始，可以使用尚未定义或加载的父语言环境来定义语言环境。
 
 ```javascript
 moment.defineLocale('fakeLocale', {parentLocale:'xyz'})
 ```
 
-As of **2.21.0** when attempting to create a moment with the newly defined locale, moment will attempt to lazy load the parent if it exists. Failing that it will default the parent to the global locale.
+从 **2.21.0** 开始，当尝试使用新定义的语言环境创建 moment 时，如果存在父语言环境，则 moment 将会尝试延迟加载它。
+当失败时，它会默认将父语言环境设置为全局的语言环境。
 
-As of **2.12.0** it is also possible to update a locale's properties.
+从 **2.12.0** 开始，还可以更新语言环境的属性。
 
 ```javascript
 moment.updateLocale('en', {
@@ -47,11 +49,14 @@ moment.updateLocale('en', {
 });
 ```
 
-Any properties specified will be updated, while others will remain the same. This function does not affect moments that already exist.
+指定的任何属性将会被更新，而其他属性将会保持不变。
+此函数不会影响已经存在的 moment。
 
-To revert an update use:
+要还原更新，则使用：
+
 ```javascript
 moment.updateLocale('en', null);
 ```
 
-**2.12.0** deprecated using ``moment.locale()`` to change an existing locale. Use ``moment.updateLocale()`` instead.
+使用 ``moment.locale()`` 更改现有的语言环境已废弃于 **2.12.0**。
+改用 ``moment.updateLocale()``。

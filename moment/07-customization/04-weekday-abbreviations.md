@@ -2,14 +2,14 @@
 title: weekdaysShort
 version: 1.0.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       weekdaysShort : String[]
   });
   moment.updateLocale('en', {
       weekdaysShort : Function
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       weekdaysShort : String[]
   });
@@ -17,7 +17,7 @@ signature: |
       weekdaysShort : Function
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       weekdaysShort : String[]
   });
@@ -27,7 +27,7 @@ signature: |
 ---
 
 
-`Locale#weekdaysShort` should be an array of the weekdays abbreviations.
+`Locale#weekdaysShort` 应是工作日缩写的数组。
 
 ```javascript
 moment.updateLocale('en', {
@@ -35,7 +35,7 @@ moment.updateLocale('en', {
 });
 ```
 
-`Locale#weekdaysShort` can be a callback function as well.
+`Locale#weekdaysShort` 也可以是回调函数。
 
 ```javascript
 moment.updateLocale('en', {

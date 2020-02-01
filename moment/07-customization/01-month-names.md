@@ -2,7 +2,7 @@
 title: months
 version: 1.0.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       months : String[]
   });
@@ -15,14 +15,14 @@ signature: |
           standalone : String[]
       }
   });
-  // From 2.11.0
+  // 从 2.11.0 开始
   moment.locale('en', {
       months : {
           format : String[],
           standalone : String[]
       }
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       months : String[]
   });
@@ -30,7 +30,7 @@ signature: |
       months : Function
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       months : String[]
   });
@@ -40,7 +40,7 @@ signature: |
 ---
 
 
-`Locale#months` should be an array of the month names.
+`Locale#months` 应是月份名称的数组。
 
 ```javascript
 moment.updateLocale('en', {
@@ -51,14 +51,15 @@ moment.updateLocale('en', {
 });
 ```
 
-If you need more processing to calculate the name of the month, (for example, if there is different grammar for different formats), `Locale#months` can be a function with the following signature. It should always return a month name.
+如果需要更多处理来计算月份的名称（例如，如果不同格式的语法不同），则 `Locale#months` 可以是具有以下签名的函数。
+它应始终返回月份的名称。
 
 ```javascript
 moment.updateLocale('en', {
     months : function (momentToFormat, format) {
-        // momentToFormat is the moment currently being formatted
-        // format is the formatting string
-        if (/^MMMM/.test(format)) { // if the format starts with 'MMMM'
+        // momentToFormat 是当前正在被格式化的 moment。
+        // format 是格式化字符串。
+        if (/^MMMM/.test(format)) { // 如果格式以 'MMMM' 开头。
             return nominative[momentToFormat.month()];
         } else {
             return subjective[momentToFormat.month()];
@@ -67,7 +68,9 @@ moment.updateLocale('en', {
 });
 ```
 
-From version **2.11.0** months can also be an object, specifying `standalone` and `format` forms (nominative and accusative). The regular expression that is run on the format to check whether to use the `format` form is `/D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/`. From version **2.14.0** a different one can be specified with the `isFormat` key.
+从 **2.11.0** 版本开始，月份也可以是一个对象，指定 `standalone` 和 `format` 的形式（主格和宾格）。
+在格式上运行以检查是否使用 `format` 形式的正则表达式是 `/D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/`。
+从 **2.14.0** 版本开始，可以使用 `isFormat` 键指定另一个。
 
 ```javascript
 moment.updateLocale('en', {

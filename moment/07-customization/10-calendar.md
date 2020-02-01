@@ -2,23 +2,23 @@
 title: calendar
 version: 1.3.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       calendar : Object
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       calendar : Object
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       calendar : Object
   });
 ---
 
 
-`Locale#calendar` should have the following formatting strings.
+`Locale#calendar` 应是具有以下格式的字符串。
 
 ```javascript
 moment.locale('en', {
@@ -33,9 +33,8 @@ moment.locale('en', {
 });
 ```
 
-Each of the `Locale#calendar` keys can also be a callback function with the
-scope of the current moment and first argument a moment that depicts now. It
-should return a formatting string.
+每个 `Locale#calendar` 键也可以是一个回调函数，具有当前 moment 的范围，且第一个参数是描述现在的 moment。
+它应该返回一个格式化字符串。
 
 ```javascript
 function callback (now) {

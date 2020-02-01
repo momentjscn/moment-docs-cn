@@ -2,9 +2,9 @@
 title: 新增语言环境
 ---
 
+要将你的语言环境添加到 Moment.js，则提交一个 pull request 并带上语言环境文件和测试文件。 
+可以在 `moment/src/locale/fr.js` 和 `moment/src/test/locale/fr.js` 中查看示例。
 
-To add your locale to Moment.js, submit a pull request with both a locale file and a test file. You can find examples in `moment/src/locale/fr.js` and `moment/src/test/locale/fr.js`.
+要在 Node.js 中运行测试，则先执行 `npm install`，然后执行 `grunt`。
 
-To run the tests in Node.js, do `npm install`, then `grunt`.
-
-If all the tests pass, submit a pull request, and thank you for contributing!
+如果所有的测试均通过，则提交 pull request，感谢你的贡献！

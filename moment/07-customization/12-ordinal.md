@@ -2,23 +2,23 @@
 title: ordinal
 version: 1.0.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       ordinal : Function
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       ordinal : Function
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       ordinal : Function
   });
 ---
 
 
-`Locale#ordinal` should be a function that returns the ordinal for a given number.
+`Locale#ordinal` 应是一个返回给定数字序数的函数。
 
 ```javascript
 moment.updateLocale('en', {
@@ -33,8 +33,9 @@ moment.updateLocale('en', {
 });
 ```
 
-As of **2.0.0**, the ordinal function should return both the number and the ordinal. Previously, only the ordinal was returned.
+从 **2.0.0** 开始，序数函数应同时返回数字和序数。以前仅返回序数。
 
-As of **2.1.0**, the token parameter was added. It is a string of the token that is being ordinalized, for example: `M` or `d`.
+从 **2.1.0** 开始，添加了令牌参数。它是要排序的令牌的字符串，例如：`M` 或 `d`。
 
-For more information on ordinal numbers, see [Wikipedia](https://en.wikipedia.org/wiki/Ordinal_number_%28linguistics%29).
+有关序数的更多信息，参阅 [Wikipedia][wikipedia_ordinal_number]。
+

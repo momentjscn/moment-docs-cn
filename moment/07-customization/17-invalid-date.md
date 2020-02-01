@@ -2,23 +2,23 @@
 title: invalidDate
 version: 2.3.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       invalidDate : String
   });
 
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       invalidDate : String
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       invalidDate : String
   });
 ---
 
-`Locale#invalidDate` should be a string.
+`Locale#invalidDate` 应是一个字符串。
 
 ```javascript
 moment.updateLocale("es", {

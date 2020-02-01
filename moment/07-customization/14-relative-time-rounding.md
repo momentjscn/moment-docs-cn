@@ -6,12 +6,13 @@ signature: |
   moment.relativeTimeRounding(fn);  // setter
 ---
 
-`duration.humanize` rounds a possibly double value before supplying it to the relativeTime format string specified in the locale. To control the rounding you can use `moment.relativeTimeRounding`.
+`duration.humanize` 在将其提供给语言环境中指定的 relativeTime 格式字符串之前，会舍入一个可能为双精度的值。
+要控制舍入，则可以使用 `moment.relativeTimeRounding`。
 
 ```javascript
 var roundingDefault = moment.relativeTimeRounding();
 
-// Round relative time evaluation down
+// 向下舍入相对时间。
 moment.relativeTimeRounding(Math.floor);
 
 moment.relativeTimeThreshold('s', 60);
@@ -22,13 +23,13 @@ moment.relativeTimeThreshold('M', 12);
 
 var a = moment();
 a.subtract({hours: 23, minutes: 59, seconds: 59});
-a.toNow()  // == 'in 23 hours'  'Round down towards the nearest hour'
+a.toNow()  // == '23 小时内'  '向下舍入到最近的小时'
 
-// back to default
+// 回退到默认值。
 moment.relativeTimeRounding(roundingDefault);
 ```
 
-You can even choose to do no rounding at all:
+甚至可以选择完全不舍入：
 
 ```javascript
 var retainValue = function (value) {
@@ -38,5 +39,5 @@ moment.relativeTimeRounding(retainValue);
 
 var a = moment();
 a.subtract({hours: 39});
-a.toNow() // == 'in 1.625 days', 'Round down towards the nearest year'
+a.toNow() // == '1.625 天内', '向下舍入到最近的年份'
 ```

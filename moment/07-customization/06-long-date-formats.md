@@ -1,28 +1,26 @@
 ---
-title: weekdaysMin
+title: longDateFormat
 version: 1.1.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
-      weekdaysMin : String[]
-  });
-  moment.updateLocale('en', {
-      weekdaysMin : Function
+      longDateFormat : Object
   });
 
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       longDateFormat : Object
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       longDateFormat : Object
   });
 ---
 
 
-`Locale#longDateFormat` should be an object containing a key/value pair for each long date format `L LL LLL LLLL LT LTS`. `LT` should be the time format, and is also used for `moment#calendar`.
+`Locale#longDateFormat` 应是一个包含每个长日期格式 `L LL LLL LLLL LT LTS` 的键/值对的对象。 
+`LT` 应是时间格式，也用于 `moment#calendar`。
 
 ```javascript
 moment.updateLocale('en', {
@@ -41,7 +39,7 @@ moment.updateLocale('en', {
 });
 ```
 
-You can eliminate the lowercase `l` tokens and they will be created automatically by replacing long tokens with the short token variants.
+可以排除小写的 `l` 令牌，它们将会通过使用短令牌变体替换长令牌而自动创建。
 
 ```javascript
 moment.updateLocale('en', {

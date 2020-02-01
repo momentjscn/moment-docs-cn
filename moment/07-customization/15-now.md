@@ -5,10 +5,9 @@ signature: |
   moment.now = function () { return +new Date(); }
 ---
 
-If you want to change the time that Moment sees, you can specify a method that
-returns the number of milliseconds since the Unix epoch (January 1, 1970).
+如果要更改 Moment 看到的时间，可以指定一个方法，该方法返回自 Unix 纪元（1970年1月1日）以来的毫秒数。
 
-The default is:
+默认为：
 
 ```javascript
 moment.now = function () {
@@ -16,5 +15,6 @@ moment.now = function () {
 }
 ```
 
-This will be used when calling `moment()`, and the current date used when tokens are omitted from
-`format()`. In general, any method that needs the current time uses this under the hood.
+这将会在调用 `moment()` 时使用，而在 `format()` 中省略令牌时使用的当前日期。 
+通常，任何需要当前时间的方法都可以在后台使用。
+

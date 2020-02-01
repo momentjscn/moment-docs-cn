@@ -2,14 +2,14 @@
 title: week
 version: 1.0.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       week : {
           dow : Int,
           doy : Int
        }
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       week : {
           dow : Int,
@@ -17,7 +17,7 @@ signature: |
       }
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       week : {
           dow : Int,
@@ -26,32 +26,34 @@ signature: |
   });
 ---
 
-`Locale#week.dow` should be an integer representing the first day of the week, 0 is Sunday, 1 is Monday, ..., 6 is Saturday.
+`Locale#week.dow` 应是代表星期中第一天的整数，0是星期日、1是星期一、...、6是星期六。
 
-`Locale#week.doy` should be an integer. `doy` is used together with `dow` to determine the first week of the year. `doy` is calculated as `7 + dow - janX`, where `janX` is the first day of January that must belong to the first week of the year.
+`Locale#week.doy` 应是整数。 
+`doy` 与 `dow` 一起用于判断年份中的第一周。 
+`doy` 的计算方式为 `7 + dow - janX`，其中 `janX` 是一月的第一天（必须属于年份中的第一周）。
 
 ```javascript
-// ISO-8601, Europe
+// ISO-8601，欧洲
 moment.updateLocale("en", { week: {
-  dow: 1, // First day of week is Monday
-  doy: 4  // First week of year must contain 4 January (7 + 1 - 4)
+  dow: 1, // 星期的第一天是星期一
+  doy: 4  // 年份的第一周必须包含1月4日 (7 + 1 - 4)
 }});
 
-// US, Canada
+// 美国，加拿大
 moment.updateLocale("en", { week: {
-  dow: 0, // First day of week is Sunday
-  doy: 6  // First week of year must contain 1 January (7 + 0 - 1)
+  dow: 0, // 星期的第一天是星期日
+  doy: 6  // 年份的第一周必须包含1月1日 (7 + 0 - 1)
 }});
 
-// Many Arab countries
+// 许多阿拉伯国家
 moment.updateLocale("en", { week: {
-  dow: 6, // First day of week is Saturday
-  doy: 12 // First week of year must contain 1 January (7 + 6 - 1)
+  dow: 6, // 星期的第一天是星期六
+  doy: 12 // 年份的第一周必须包含1月1日 (7 + 6 - 1)
 }});
 
-// Also common
+// 也很常见
 moment.updateLocale("en", { week: {
-  dow: 1, // First day of week is Monday
-  doy: 7  // First week of year must contain 1 January (7 + 1 - 1)
+  dow: 1, // 星期的第一天是星期一
+  doy: 7  // 年份的第一周必须包含1月1日 (7 + 1 - 1)
 }});
 ```

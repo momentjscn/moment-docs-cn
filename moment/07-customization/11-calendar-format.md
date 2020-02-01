@@ -5,7 +5,7 @@ signature: |
   moment.calendarFormat = Function
 ---
 
-This lets you modify the tokens used by [calendar](#/customization/calendar/).
+这可以修改[日历][moment-calendar]使用的令牌。
 
 ```javascript
 moment.calendarFormat = function (myMoment, now) {
@@ -18,7 +18,7 @@ moment.calendarFormat = function (myMoment, now) {
 		diff < 1 ? 'sameDay' :
 		diff < 2 ? 'nextDay' :
 		diff < 7 ? 'nextWeek' :
-		// introduce thisMonth and nextMonth
+		// 介绍 thisMonth 和 nextMonth。
 		(myMoment.month() === now.month() && myMoment.year() === now.year()) ? 'thisMonth' :
 		(nextMonth.month() === myMoment.month() && nextMonth.year() === myMoment.year()) ? 'nextMonth' : 'sameElse';
 	return retVal;

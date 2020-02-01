@@ -2,7 +2,7 @@
 title: monthsShort
 version: 1.0.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       monthsShort : String[]
   });
@@ -15,14 +15,14 @@ signature: |
           standalone : String[]
       }
   });
-  // From 2.11.0
+  // 从 2.11.0 开始
   moment.locale('en', {
       monthsShort : {
           format: String[],
           standalone : String[]
       }
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       monthsShort : String[]
   });
@@ -30,7 +30,7 @@ signature: |
       monthsShort : Function
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       monthsShort : String[]
   });
@@ -40,7 +40,7 @@ signature: |
 ---
 
 
-`Locale#monthsShort` should be an array of the month abbreviations.
+`Locale#monthsShort` 应是月份缩写的数组。
 
 ```javascript
 moment.updateLocale('en', {
@@ -51,7 +51,7 @@ moment.updateLocale('en', {
 });
 ```
 
-Like `Locale#months`, `Locale#monthsShort` can be a callback function as well.
+与 `Locale#months` 一样，`Locale#monthsShort` 也可以是回调函数。
 
 ```javascript
 moment.updateLocale('en', {
@@ -65,7 +65,7 @@ moment.updateLocale('en', {
 });
 ```
 
-**Note:** From version **2.11.0**, like `Locale#months`, `Locale#monthsShort` can be an object with `standalone` and `format` cases.
+注意：从 **2.11.0** 版本开始，与 `Locale#months` 一样，`Locale#monthsShort` 可以是具有 `standalone` 和 `format` 用例的对象。
 
 ```javascript
 moment.updateLocale('en', {

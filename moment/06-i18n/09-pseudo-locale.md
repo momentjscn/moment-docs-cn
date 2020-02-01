@@ -5,9 +5,11 @@ signature: |
     moment.locale('x-pseudo')
 ---
 
-As of version **2.13.0** moment optionally includes a pseudo locale. This locale will populate the dates with very obviously changed data.
-Pseudo locales can be useful when testing, as they make obvious what data has and has not been localized. Just include the pseudo-locale, and set moment's locale to x-pseudo.
-Text from Moment will be very easy to spot.
+从 **2.13.0** 版本开始，moment 可选地包含伪语言环境。
+此语言环境将会使用非常明显变化的数据填充日期。
+伪语言环境在测试时很有用，因为它们可以清楚地显示已定位和未定位的数据。
+只需包含伪语言环境，并将 moment 的语言环境设置为 x-pseudo。 
+Moment 中的文本将会非常容易发现。
 
 ```javascript
 moment.locale('x-pseudo');

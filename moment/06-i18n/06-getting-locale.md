@@ -2,24 +2,25 @@
 title: locale()
 version: 1.6.0
 signature: |
-  // From version 2.8.1 onward
+  // 从 2.8.1 版本开始
   moment.locale();
 
-  // Deprecated in version 2.8.1
+  // 废弃于 2.8.1 版本
   moment.lang();
 ---
 
+如果需要经常更改语言环境，则可能想知道当前正在使用的语言环境。
+这可以不带任何参数调用 `moment.locale`。
 
-If you are changing locales frequently, you may want to know what locale is currently being used. This is as simple as calling `moment.locale` without any parameters.
 
 ```javascript
-moment.locale('en'); // set to english
-moment.locale(); // returns 'en'
-moment.locale('fr'); // set to french
-moment.locale(); // returns 'fr'
+moment.locale('en'); // 设为英语
+moment.locale(); // 返回 'en'
+moment.locale('fr'); // 设为法语
+moment.locale(); // 返回 'fr'
 ```
 
-As of version **2.12.0** it is possible to list all locales that have been loaded and are available to use:
+从 **2.12.0** 版本开始，可以列出所有已加载并可以使用的语言环境：
 
 ```javascript
 moment.locales()

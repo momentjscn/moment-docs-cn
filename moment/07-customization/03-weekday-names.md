@@ -2,7 +2,7 @@
 title: weekdays
 version: 1.0.0
 signature: |
-  // From version 2.12.0 onward
+  // 从 2.12.0 版本开始
   moment.updateLocale('en', {
       weekdays : String[]
   });
@@ -16,7 +16,7 @@ signature: |
           isFormat : RegExp
       }
   });
-  // From version 2.11.0
+  // 从 2.11.0 版本开始
   moment.locale('en', {
       weekdays : {
           standalone : String[],
@@ -24,7 +24,7 @@ signature: |
           isFormat : Boolean
       }
   });
-  // From version 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2 版本
   moment.locale('en', {
       weekdays : String[]
   });
@@ -32,7 +32,7 @@ signature: |
       weekdays : Function
   });
 
-  // Deprecated version 2.8.1
+  // 废弃于 2.8.1 版本
   moment.lang('en', {
       weekdays : String[]
   });
@@ -43,7 +43,7 @@ signature: |
 ---
 
 
-`Locale#weekdays` should be an array of the weekdays names.
+`Locale#weekdays` 应是工作日名称的数组。
 
 ```javascript
 moment.updateLocale('en', {
@@ -53,7 +53,7 @@ moment.updateLocale('en', {
 });
 ```
 
-`Locale#weekdays` can be a callback function as well.
+`Locale#weekdays` 也可以是回调函数。
 
 ```javascript
 moment.updateLocale('en', {
@@ -63,7 +63,8 @@ moment.updateLocale('en', {
 });
 ```
 
-**Note:** From version **2.11.0** format/standalone cases can be passed as well. `isFormat` will be used against the full format string to determine which form to use.
+注意：从 **2.11.0** 版本开始，format/standalone 用例也可以传入。 
+`isFormat` 将会用于完整的格式字符串，以判断要使用的格式。
 
 ```javascript
 moment.updateLocale('en', {

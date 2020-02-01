@@ -2,25 +2,24 @@
 title: meridiem
 version: 1.6.0
 signature: |
-  // From 2.12.0 onward
+  // 从 2.12.0 开始
   moment.updateLocale('en', {
       meridiem : Function
   });
-  // From 2.8.1 to 2.11.2
+  // 从 2.8.1 至 2.11.2
   moment.locale('en', {
       meridiem : Function
   });
 
-  // Deprecated in 2.8.1
+  // 废弃于 2.8.1
   moment.lang('en', {
       meridiem : Function
   });
 ---
 
+如果语言环境使用 'am/pm'，则可以省略 `Locale#meridiem`，因为这些值是默认值。
 
-If your locale uses 'am/pm', `Locale#meridiem` can be omitted, as those values are the defaults.
-
-If your locale needs any different computation for am/pm, `Locale#meridiem` should be a callback function that returns the correct string based on hour, minute, and upper/lowercase.
+如果语言环境需要对 am/pm 进行任何其他计算，则 `Locale#meridiem` 应是一个基于小时、分钟、和大写/小写返回正确字符串的回调函数。
 
 ```javascript
 moment.updateLocale('zh-cn', {
