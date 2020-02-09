@@ -5,8 +5,8 @@ signature: |
   moment.duration().clone();
 ---
 
-Create a clone of a duration. Durations are mutable, just like moment objects,
-so this lets you get a snapshot, at some point in time.
+创建时长的副本。 
+时长是可变的，就像 moment 对象一样，因此可以在某个时间点获取快照。
 
 ```javascript
 var d1 = moment.duration();

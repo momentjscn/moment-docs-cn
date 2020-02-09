@@ -8,14 +8,13 @@ signature: |
   moment.duration(String);
 ---
 
-
-To create a duration, call `moment.duration()` with the length of time in milliseconds.
+要创建时长，则调用 `moment.duration()`，并以毫秒为单位。
 
 ```javascript
-moment.duration(100); // 100 milliseconds
+moment.duration(100); // 100 毫秒
 ```
 
-If you want to create a moment with a unit of measurement other than milliseconds, you can pass the unit of measurement as well.
+如果要使用毫秒以外的其他度量单位来创建 moment，则也可以传入度量单位。
 
 ```javascript
 moment.duration(2, 'seconds');
@@ -27,13 +26,13 @@ moment.duration(2, 'months');
 moment.duration(2, 'years');
 ```
 
-The same shorthand for `moment#add` and `moment#subtract` works here as well.
+同样，`moment#add` 和 `moment#subtract`的简写在这里也适用。
 
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <th>Key</th>
-      <th>Shorthand</th>
+      <th>键</th>
+      <th>简写</th>
     </tr>
     <tr>
       <td>years</td>
@@ -70,7 +69,7 @@ The same shorthand for `moment#add` and `moment#subtract` works here as well.
   </tbody>
 </table>
 
-Much like `moment#add`, you can pass an object of values if you need multiple different units of measurement.
+与 `moment#add` 相似，如果需要多个不同的度量单位，则可以传入值的对象。
 
 ```javascript
 moment.duration({
@@ -84,43 +83,43 @@ moment.duration({
 });
 ```
 
-As of **2.1.0**, moment supports parsing ASP.NET style time spans. The following formats are supported.
+从 **2.1.0** 开始，moment 支持解析 ASP.NET 风格的时间跨度。
+支持以下格式。
 
-The format is an hour, minute, second string separated by colons like `23:59:59`. The number of days can be prefixed with a dot separator like so `7.23:59:59`. Partial seconds are supported as well `23:59:59.999`.
+格式是以冒号分隔的小时、分钟、秒钟的字符串，例如 `23:59:59`。
+天数可以加上点分隔符，如 `7.23:59:59。
+还支持部分秒数如 `23:59:59.999`。
 
 ```javascript
 moment.duration('23:59:59');
 moment.duration('23:59:59.999');
 moment.duration('7.23:59:59.999');
-moment.duration('23:59'); // added in 2.3.0
+moment.duration('23:59'); // 新增于 2.3.0
 ```
 
-As of **2.3.0**, moment also supports parsing [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals) durations.
+从 **2.3.0** 开始，moment 还支持解析 [ISO 8601][ISO_8601_Time_intervals] 时长。
 
 ```javascript
 moment.duration('P1Y2M3DT4H5M6S');
 moment.duration('P1M');
 ```
 
-As of **2.11.0**, duration format strings with a space between days and rest
-is supported.
+从 **2.11.0** 开始，支持时长的格式字符串，其中天数和剩下的时间之间有空格。
 
 ```javascript
 moment.duration('7 23:59:59.999');
 ```
 
-As of **2.13.0**, mixed negative and positive signs are supported when parsing durations.
+从 **2.13.0** 开始，解析时长时支持混合的负号和正号。
 
 ```javascript
 moment.duration('PT-6H3M')
 ```
 
-As of **2.18.0**, invalid durations are supported, similarly to invalid
-moments. To create an invalid duration you can pass `NaN` for a value of
-a unit.
+从 **2.18.0** 开始，支持无效的时长，类似于无效的时刻。
+要创建无效的时长，可以为单位的值传入 `NaN`。
 
-In upcoming releases expect invalid durations to cover more cases (like
-null values for units).
+在即将发布的版本中，预期无效的时长可以覆盖更多情况（例如单位的空值）。
 
 ```javascript
 moment.duration(NaN);

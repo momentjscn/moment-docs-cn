@@ -2,11 +2,16 @@
 title: 时长
 ---
 
+Moment.js 也有时长的对象。
+将 moment 定义为单个时间点，将 duration 定义为时间的长度。
 
-Moment.js also has duration objects. Where a moment is defined as single points in time, durations are defined as a length of time.
+时长没有定义的开始和结束日期。
+它们是无上下文的。
 
-Durations do not have a defined beginning and end date. They are contextless.
+从概念上讲，时长比 '今天下午2点到4点之间' 更类似于 '2 小时'。
+因此，它们不是在依赖上下文的单位之间进行转换的好方法。
 
-A duration is conceptually more similar to '2 hours' than to 'between 2 and 4 pm today'. As such, they are not a good solution to converting between units that depend on context.
+例如，一年可以定义为366天、365天、365.25天、12个月、52周。
+没有上下文，试图将年转换为天是毫无意义的。
+与使用 `Durations` 相比，使用 `moment#diff` 计算两个时刻之间的天数或年数要好得多。
 
-For example, a year can be defined as 366 days, 365 days, 365.25 days, 12 months, or 52 weeks. Trying to convert years to days makes no sense without context. It is much better to use `moment#diff` for calculating days or years between two moments than to use `Durations`.
