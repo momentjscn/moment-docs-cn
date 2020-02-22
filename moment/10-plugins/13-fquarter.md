@@ -3,23 +3,24 @@ title: fquarter
 ---
 
 
-If you ever have need for [Fiscal](https://en.wikipedia.org/wiki/Fiscal_year), Calendar or Academic quarters, you can use the [moment-fquarter](https://github.com/robgallen/moment-fquarter) plugin by [@robgallen](https://github.com/robgallen).
+如果需要[财政][Fiscal_year]、日历或学术季度，可以使用 [@robgallen][robgallen] 的 [moment-fquarter][moment-fquarter] 插件。
 
-At its simplest, just call the fquarter method on any moment object. It returns a formatted string with April being the first quarter.
+最简单的是，只需在任何 moment 对象上调用 fquarter 方法。
+它返回格式化的字符串，其中四月是第一季度。
 
 ```javascript
 moment("2013-01-01").fquarter();
 // Q4 2012/13
 ```
 
-You can pass in any month as the starting quarter, e.g. July
+可以将任何月份作为起始季度，例如七月：
 
 ```javascript
 moment("2013-01-01").fquarter(7);
 // Q3 2012/13
 ```
 
-If you want calendar quarters, start in January
+如果需要日历季度，则从一月开始：
 
 ```javascript
 moment("2013-01-01").fquarter(1);

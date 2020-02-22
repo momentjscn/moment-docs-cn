@@ -5,8 +5,7 @@ signature: |
   moment.duration().toJSON();
 ---
 
-When serializing a duration object to JSON, it will be represented as an
-ISO8601 string.
+当将时长对象序列化为 JSON 时，它将会表示为 ISO8601 字符串。
 
 ```javascript
 JSON.stringify({
@@ -14,4 +13,5 @@ JSON.stringify({
 }); // '{"postDuration":"PT5M"}'
 ```
 
-Invalid durations return `Invalid Date` as json representation.
+无效的时长返回 json 表示的 `Invalid Date`。
+

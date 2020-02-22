@@ -6,7 +6,7 @@ signature: |
 ---
 
 
-To check if a variable is a moment duration object, use `moment.isDuration()`.
+要检查变量是否为 moment 的时长对象，则使用 `moment.isDuration()`。
 
 ```javascript
 moment.isDuration() // false

@@ -8,10 +8,9 @@ signature: |
   moment.duration().subtract(Object);
 ---
 
+通过减去时间来更改原始的时长。
 
-Mutates the original duration by subtracting time.
-
-The same keys and shorthands used to create durations can be used here as the second argument.
+用于创建时长的相同的键和速记可以在此处用作第二个参数。
 
 ```javascript
 var a = moment.duration(3, 'd');
@@ -19,5 +18,5 @@ var b = moment.duration(2, 'd');
 a.subtract(b).days(); // 1
 ```
 
-Note that adding an invalid duration to any other duration results in an invalid
-duration.
+注意，将无效的时长添加到任何其他时长会产生无效的时长。
+

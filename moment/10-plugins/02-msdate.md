@@ -3,18 +3,20 @@ title: msdate
 ---
 
 
-If you are using OLE Automation dates in .NET check out Markit On Demand's `moment-msdate`. Using this plugin allows you to format OA dates into JavaScript dates and vice-versa.
+如果你在 .NET 中使用 OLE Automation 日期，则查看 Markit On Demand 的 `moment-msdate`。 
+使用此插件，可以将 OA 日期格式化为 JavaScript 日期，反之亦然。
 
-Convert a `moment` to an OA date:
+将 `moment` 转换为 OA 日期：
 
 ```javascript
-moment().toOADate(); // a floating point number
+moment().toOADate(); // 浮点数
 ```
 
-Or, convert an OA date to a `moment`:
+或者，将 OA 日期转换为 `moment`：
 
 ```javascript
 moment.fromOADate(41493); // Wed Aug 07 2013 00:00:00 GMT-0600 (MDT)
 ```
 
-More information and detailed docs can be found on GitHub at [http://markitondemand.github.io/moment-msdate/](http://markitondemand.github.io/moment-msdate/).
+更多信息和详细文档可以在 GitHub 上找到 [http://markitondemand.github.io/moment-msdate/][moment-msdate]。
+

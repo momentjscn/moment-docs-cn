@@ -3,4 +3,5 @@ title: 插件
 ---
 
 
-Some other people have made plugins for Moment.js that may be useful to you.
+其他一些开发者为 Moment.js 制作了插件，可能对你有用。
+

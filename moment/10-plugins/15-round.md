@@ -5,9 +5,10 @@ signature: |
 ---
 
 
-This plugin will round date/time to a given interval.
-
 For example,
+该插件会将日期/时间四舍五入到给定的时间间隔。
+
+例如，
 
 ``` javascript
 require('moment-round');
@@ -19,4 +20,5 @@ m.ceil(21, 'hours'); // 2015-06-18 21:00:00
 m.ceil(20, 'hours'); // 2015-06-19 00:00:00
 ```
 
-The repository is located at [github.com/WebDevTmas/moment-round](https://github.com/WebDevTmas/moment-round).
+该仓库位于 [github.com/WebDevTmas/moment-round][moment-round]。
+

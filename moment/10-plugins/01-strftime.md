@@ -5,6 +5,7 @@ signature: |
 ---
 
 
-If you are more comfortable working with strftime instead of LDML-like parsing tokens, you can use Ben Oakes' plugin `moment-strftime`.
+如果你更习惯使用 strftime 而不是类似 LDML 的解析令牌，则可以使用 Ben Oakes 的插件 `moment-strftime`。
 
-The repository is located at [github.com/benjaminoakes/moment-strftime](https://github.com/benjaminoakes/moment-strftime).
+该仓库位于 [github.com/benjaminoakes/moment-strftime][moment-strftime]。
+

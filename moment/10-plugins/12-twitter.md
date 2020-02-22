@@ -3,23 +3,23 @@ title: twitter
 ---
 
 
-If you're trying to format times for tweets like the way Twitter does, you can use the [moment.twitter](https://github.com/hijonathan/moment.twitter) plugin by [@hijonathan](https://github.com/hijonathan).
+如果想尝试像 Twitter 一样格式化推文的时间，则可以使用 [@hijonathan][hijonathan] 的 [moment.twitter][moment.twitter] 插件。
 
-It's a simple way to display both short and long versions of human-readable timestamps.
+这是显示人类可读的时间戳的长短版本的简单方法。
 
 ```javascript
 moment().subtract(5, 'hours').twitterLong();
 // 5 hours
 ```
 
-Yes, it does smart pluralization.
+是的，它可以进行智能多元化。
 
 ```javascript
 moment().subtract(1, 'hour').twitterLong();
 // 1 hour
 ```
 
-Not short enough for you?
+还不够短吗？
 
 ```javascript
 moment().subtract(6, 'days').twitterShort();

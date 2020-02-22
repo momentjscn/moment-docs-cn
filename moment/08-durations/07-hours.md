@@ -7,6 +7,7 @@ signature: |
 ---
 
 
-As with the other getters for durations, `moment.duration().hours()` gets the hours (0 - 23).
+与时长的其他获取器一样，`moment.duration().hours()` 用于获取小时数（0-23）。
 
-`moment.duration().asHours()` gets the length of the duration in hours.
+`moment.duration().asHours()` 用于获取时长的长度（以小时为单位）。
+

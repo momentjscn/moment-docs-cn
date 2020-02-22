@@ -7,9 +7,9 @@ signature: |
 ---
 
 
-To get the number of milliseconds in a duration, use `moment.duration().milliseconds()`.
+要获取时长的毫秒数，则使用 `moment.duration().milliseconds()`。
 
-It will return a number between 0 and 999.
+它将会返回 0 至 999 之间的数字。
 
 ```javascript
 moment.duration(500).milliseconds(); // 500
@@ -17,7 +17,7 @@ moment.duration(1500).milliseconds(); // 500
 moment.duration(15000).milliseconds(); // 0
 ```
 
-If you want the length of the duration in milliseconds, use `moment.duration().asMilliseconds()` instead.
+如果想要时长的长度（以毫秒为单位），则改用 `moment.duration().asMilliseconds()`。
 
 ```javascript
 moment.duration(500).asMilliseconds(); // 500

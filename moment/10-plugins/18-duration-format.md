@@ -5,13 +5,13 @@ signature: |
 ---
 
 
-This is a plugin that will allow comprehensive formatting of Moment Durations.
+这是一个插件，将会允许对 Moment 时长进行全面格式化。
 
-For example,
+例如，
 
 ```javascript
 moment.duration(123, "minutes").format("h:mm");
 // "2:03"
 ```
 
-The repository is located at [github.com/jsmreese/moment-duration-format](https://github.com/jsmreese/moment-duration-format).
+该仓库位于 [github.com/jsmreese/moment-duration-format][moment-duration-format]。

@@ -6,7 +6,7 @@ signature: |
   moment.duration().asDays();
 ---
 
+与时长的其他获取器一样，`moment.duration().days()` 用于获取天数（0-30）。
 
-As with the other getters for durations, `moment.duration().days()` gets the days (0 - 30).
+`moment.duration().asDays()` 用于获取时长的长度（以天为单位）。
 
-`moment.duration().asDays()` gets the length of the duration in days.

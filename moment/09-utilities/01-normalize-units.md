@@ -6,7 +6,8 @@ signature: |
 ---
 
 
-Many of Moment's functions allow the caller to pass in aliases for unit enums. For example, all of the `get`s below are equivalent.
+Moment 的许多函数都允许调用者传入单位枚举的别名。
+例如，下面的所有 `get` 都是等效的。
 
 ```javascript
 var m = moment();
@@ -15,7 +16,7 @@ m.get('year');
 m.get('years');
 ```
 
-If you're extending the library, you may want access to Moment's facilities for that in order to better align your functionality with Moment's.
+如果要扩展库，则可能需要访问 Moment 的工具，以便更好地使函数与 Moment 的函数保持一致。
 
 ```javascript
 moment.normalizeUnits('y');      // 'year'

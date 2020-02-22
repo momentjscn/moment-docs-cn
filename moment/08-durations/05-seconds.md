@@ -7,9 +7,9 @@ signature: |
 ---
 
 
-To get the number of seconds in a duration, use `moment.duration().seconds()`.
+要获取时长的秒数，则使用 `moment.duration().seconds()`。
 
-It will return a number between 0 and 59.
+它将会返回 0 至 59 之间的数字。
 
 ```javascript
 moment.duration(500).seconds(); // 0
@@ -17,7 +17,7 @@ moment.duration(1500).seconds(); // 1
 moment.duration(15000).seconds(); // 15
 ```
 
-If you want the length of the duration in seconds, use `moment.duration().asSeconds()` instead.
+如果想要时长的长度（以秒为单位），则改用 `moment.duration().asSeconds()`。
 
 ```javascript
 moment.duration(500).asSeconds(); // 0.5

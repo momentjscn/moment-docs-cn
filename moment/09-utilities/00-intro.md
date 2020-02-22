@@ -3,4 +3,5 @@ title: 实用函数
 ---
 
 
-Moment exposes some methods which may be useful to people extending the library or writing custom parsers.
+Moment 公开了一些方法，这些方法可能对扩展库或编写自定义解析器的开发者有用。
+

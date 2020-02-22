@@ -7,6 +7,7 @@ signature: |
 ---
 
 
-As with the other getters for durations, `moment.duration().months()` gets the months (0 - 11).
+与时长的其他获取器一样，`moment.duration().months()` 用于获取月数（0-11）。
 
-`moment.duration().asMonths()` gets the length of the duration in months.
+`moment.duration().asMonths()` 用于获取时长的长度（以月为单位）。
+

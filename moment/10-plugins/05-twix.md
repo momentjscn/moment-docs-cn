@@ -5,8 +5,9 @@ signature: |
 ---
 
 
-Another range plugin is Isaac Cambron's library `Twix`. It has many
-range-related features and excels at formatting ranges readably. For example,
+另一个范围插件是 Isaac Cambron 的库 `Twix`。
+它具有许多与范围相关的特性，并且擅长格式化范围。
+例如，
 
 ```javascript
 var t = moment("1/25/1982 9:30 AM").twix("1/25/1982 1:30 PM");
@@ -16,12 +17,12 @@ t.format();  // 'Jan 25, 1982, 9:30 AM - 1:30 PM'
 t.simpleFormat("h:m"); // '9:30 - 1:30'
 ```
 
-Full documentation of all the options and features is [here](http://icambron.github.io/twix.js).
+所有选项和特性的完整文档在[这里][twix]。
 
-It's available on npm like so:
+像这样在 npm 上可用：
 
 ```
 npm install twix
 ```
 
-Or just grab the JS file from [here](https://raw.github.com/icambron/twix.js/master/bin/twix.js).
+或者只是从[这里][twix.js]获取 JS 文件。

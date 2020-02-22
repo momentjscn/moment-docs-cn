@@ -5,15 +5,16 @@ signature: |
 ---
 
 
-If you want to work with Taiwan calendar system , you can use Bradwoo8621's plugin `moment-taiwan`.
+如果要使用台湾日历系统，可以使用 Bradwoo8621 的插件 `moment-taiwan`。
 
-When installed, it will wrap `moment` and moment will be able to format and parse Taiwan years. Here is a short example:
+当安装后，它将会可以封装 `moment`，且将可以格式化和解析台湾年份。 
+这是一个简短的示例：
 
 ```js
-m = moment('104/01/01', 'tYY/MM/DD') // Parse a Taiwan date
+m = moment('104/01/01', 'tYY/MM/DD') // 解析 Taiwan 日期
 m.format('tYY/MM/DD [is] YYYY/M/D') // 104/01/01 is 2015/01/01
 
 m.twYear() // 104
 ```
 
-The repository is located at [github.com/bradwoo8621/moment-taiwan](https://github.com/bradwoo8621/moment-taiwan).
+该仓库位于 [github.com/bradwoo8621/moment-taiwan][moment-taiwan]。

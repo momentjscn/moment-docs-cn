@@ -5,18 +5,17 @@ signature: |
 ---
 
 
-This plugin extracts the format of a date/time string. 
+该插件提取日期/时间字符串的格式。
 
 ```javascript
 var format = moment.parseFormat('Thursday, February 6th, 2014 9:20pm');
 // dddd, MMMM Do, YYYY h:mma
-moment().format(format); // format
+moment().format(format); // 格式化
 ```
 
-That allows to create smart date inputs that let your users set a
-Date/Time and lets you extract the user's preferred format for future usage.
-Find an example usage of it at [minutes.io](https://minutes.io/new/Meeting).
+这样就可以创建智能日期输入，让用户设置日期/时间，并提取用户的首选格式以供将来使用。
+在 [minutes.io][minutes.io] 上找到其用法示例。
 
-The Plugin has been authored by [@gr2m](https://github.com/gr2m).
-Links: [Demo](http://gr2m.github.io/moment-parseformat/) |
-[Source](https://github.com/gr2m/moment.parseFormat)
+该插件由 [@gr2m][gr2m] 编写。 
+链接：[演示][moment-parseformat_demo] | [源代码][moment-parseformat]。
+

@@ -4,6 +4,6 @@ signature: |
   npm install moment-islamic-civil
 ---
 
-This is another Hijri calendar (based on civil calculations).
+这是另一个 Hijri 日历（基于民间计算）。
 
-The repository is located at [github.com/ACGC/moment-islamic-civil](https://github.com/ACGC/moment-islamic-civil).
+该仓库位于 [github.com/ACGC/moment-islamic-civil][moment-islamic-civil]。

@@ -5,10 +5,10 @@ signature: |
 ---
 
 
-If you need to work with date ranges, you can use Gianni Chiappetta's plugin `moment-range`.
+如果需要处理日期范围，则可以使用 Gianni Chiappetta 的插件 `moment-range`。
 
-Documentation can be found on the homepage [github.com/rotaready/moment-range](https://github.com/rotaready/moment-range).
+文档可以在主页 [github.com/rotaready/moment-range][moment-range] 上找到。
 
-And it is also available for the web at the repository below.
+也可以在下面的仓库中通过 Web 进行访问。
 
-The repository is located at [github.com/rotaready/moment-range](https://github.com/rotaready/moment-range).
+该仓库位于 [github.com/rotaready/moment-range][moment-range]。

@@ -4,15 +4,13 @@ signature: |
   npm install moment-jdateformatparser
 ---
 
+如果要使用 `java.text.DateFormat`，可以使用此插件。
 
-If you want to work with the `java.text.DateFormat` you can use this plugin.
-
-
-For example,
+例如，
 
 ```javascript
-moment("2013-12-24 14:30").formatWithJDF("dd.MM.yyyy");  // returns the formatted date "24.12.2013"
-moment().toJDFString("DD.MM.YYYY");  // returns the Java format pattern "dd.MM.yyyy"
+moment("2013-12-24 14:30").formatWithJDF("dd.MM.yyyy");  // 返回格式化的日期 "24.12.2013"
+moment().toJDFString("DD.MM.YYYY");  // 返回 Java 的格式模式 "dd.MM.yyyy"
 ```
 
-The repository is located at [github.com/MadMG/moment-jdateformatparser](https://github.com/MadMG/moment-jdateformatparser).
+该仓库位于 [github.com/MadMG/moment-jdateformatparser][moment-jdateformatparser]。

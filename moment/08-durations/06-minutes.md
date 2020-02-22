@@ -7,6 +7,7 @@ signature: |
 ---
 
 
-As with the other getters for durations, `moment.duration().minutes()` gets the minutes (0 - 59).
+与时长的其他获取器一样，`moment.duration().minutes()` 用于获取分钟数（0-59）。
 
-`moment.duration().asMinutes()` gets the length of the duration in minutes.
+`moment.duration().asMinutes()` 用于获取时长的长度（以分钟为单位）。
+

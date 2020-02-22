@@ -4,19 +4,19 @@ signature: |
   npm install moment-business
 ---
 
-This is a Moment.js library that allows Moment operations for Western work weeks: 7 day weeks where Saturday and Sunday
-are non-work days.
+这是一个 Moment.js 库，允许 Moment 在西方工作周中进行操作：7 天工作周，其中周六和周日为非工作日。
 
-For example,
+例如，
 
 ```js
 import business from 'moment-business';
 
-// true if the moment is Mon-Fri, false otherwise
+// 如果 moment 是周一至周五，则为 true，否则为 false。
 business.isWeekDay(someMoment);
 
-// Adds five work days to the Moment
+// 增加五个工作日到 Moment。
 business.addWeekDays(someMoment, 5);
 ```
 
-The repository is located at [github.com/jmeas/moment-business](https://github.com/jmeas/moment-business).
+该仓库位于 [github.com/jmeas/moment-business][moment-business]。
+

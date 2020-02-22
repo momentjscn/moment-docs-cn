@@ -5,30 +5,30 @@ signature: |
   moment.duration().humanize();
 ---
 
+有时，只想要 `moment#from` 的所有优点，但又不想创建两个 moment，而只想显示一段时长。
 
-Sometimes, you want all the goodness of `moment#from` but you don't want to have to create two moments, you just want to display a length of time.
-
-Enter `moment.duration().humanize()`.
-
-```javascript
-moment.duration(1, "minutes").humanize(); // a minute
-moment.duration(2, "minutes").humanize(); // 2 minutes
-moment.duration(24, "hours").humanize();  // a day
-```
-
-By default, the return string is suffixless. If you want a suffix, pass in true as seen below.
+使用 `moment.duration().humanize()`。
 
 ```javascript
-moment.duration(1, "minutes").humanize(true); // in a minute
+moment.duration(1, "minutes").humanize(); // 1 分钟
+moment.duration(2, "minutes").humanize(); // 2 分钟
+moment.duration(24, "hours").humanize();  // 1 天
 ```
 
-For suffixes before now, pass in a negative number.
+默认情况下，返回的字符串是没有后缀。 
+如果需要后缀，则按如下所示传入 true。
 
 ```javascript
-moment.duration(-1, "minutes").humanize(true); // a minute ago
+moment.duration(1, "minutes").humanize(true); // 1 分钟内
 ```
 
-Invalid durations are humanized to the localized version of `Invalid Date`.
+对于当前时间之前的后缀，则传入负数。
+
+```javascript
+moment.duration(-1, "minutes").humanize(true); // 1 分钟前
+```
+
+无效的时长会被人性化为 `Invalid Date` 的本地化版本。
 
 ```javascript
 moment.duration.invalid().humanize(); // Invalid Date

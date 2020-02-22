@@ -5,15 +5,15 @@ signature: |
 ---
 
 
-This is a Moment.js plugin that allows the use of timers, which offer much more control than the native JavaScript timers.
-It's basically a rewrite of JavaScripts own setInterval and setTimeout.
+这是一个 Moment.js 插件，允许使用计时器，该计时器比原生的 JavaScript 计时器提供更多的控制权。 
+基本上，这是对 JavaScript 自有的 setInterval 和 setTimeout 的重写。
 
-For example,
+例如，
 
 ```javascript
 var timer = moment.duration(5, "seconds").timer({loop: true}, function() {
-  // Callback
+  // 回调
 });
 ```
 
-The repository is located at [github.com/SeverinDK/moment-timer](https://github.com/SeverinDK/moment-timer).
+该仓库位于 [github.com/SeverinDK/moment-timer][moment-timer]。

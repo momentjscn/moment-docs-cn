@@ -6,7 +6,7 @@ signature: |
   moment.duration().asYears();
 ---
 
+与时长的其他获取器一样，`moment.duration().years()` 用于获取年数。
 
-As with the other getters for durations, `moment.duration().years()` gets the years.
+`moment.duration().asYears()` 用于获取时长的长度（以年为单位）。
 
-`moment.duration().asYears()` gets the length of the duration in years.
