@@ -8,13 +8,13 @@ signature: |
 通过将原始的 moment 设置为时间单位的开头来对其进行更改。
 
 ```javascript
-moment().startOf('year');    // 设置为今年一月1日上午 12:00
-moment().startOf('month');   // 设置为本月1日上午 12:00
-moment().startOf('quarter');  // 设置为当前季度的开始，即每月的第一天上午 12:00
-moment().startOf('week');    // 设置为本周的第一天上午 12:00
-moment().startOf('isoWeek'); // 根据 ISO 8601 设置为本周的第一天上午 12:00
-moment().startOf('day');     // 设置为今天上午 12:00
-moment().startOf('date');     // 设置为今天上午 12:00
+moment().startOf('year');    // 设置为今年一月1日上午 00:00
+moment().startOf('month');   // 设置为本月1日上午 00:00
+moment().startOf('quarter');  // 设置为当前季度的开始，即每月的第一天上午 00:00
+moment().startOf('week');    // 设置为本周的第一天上午 00:00
+moment().startOf('isoWeek'); // 根据 ISO 8601 设置为本周的第一天上午 00:00
+moment().startOf('day');     // 设置为今天上午 00:00
+moment().startOf('date');     // 设置为今天上午 00:00
 moment().startOf('hour');    // 设置为当前时间，但是 0 分钟、0 秒钟、0 毫秒
 moment().startOf('minute');  // 设置为当前时间，但是 0 秒钟、0 毫秒
 moment().startOf('second');  // 与 moment().milliseconds(0); 相同
