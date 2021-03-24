@@ -21,7 +21,7 @@ signature: |
 `Locale#invalidDate` 应是一个字符串。
 
 ```javascript
-moment.updateLocale("es", {
+moment.updateLocale("en", {
   invalidDate: "Fecha invalida"
 });
 ```
