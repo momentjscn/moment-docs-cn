@@ -14,7 +14,6 @@ signature: |
 moment([2007, 0, 29]).fromNow(); // 4 年前
 ```
 
-If you pass `true`, you can get the value without the suffix.
 如果传入 `true`，则可以获得不带后缀的值。
 
 ```javascript
